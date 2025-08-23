@@ -1,0 +1,4472 @@
+
+
+<HEAD>
+
+<TITLE>link5</TITLE>
+
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function writeModified() {
+
+
+
+// ブラウザ情報の設定
+
+ie =(navigator.appName=='Microsoft Internet Explorer');
+
+nn =(navigator.appName=='Netscape');
+
+mac=(navigator.appVersion.indexOf('Mac')!=-1);
+
+ver=parseInt(navigator.appVersion);
+
+if(ie && ver==4)
+
+  ver = parseInt(
+
+          navigator.appVersion.substring
+
+            (navigator.appVersion.indexOf('MSIE ')+5)
+
+          );
+
+
+
+// 曜日の配列を作る
+
+week = new Week();
+
+function Week(){
+
+  var i=0;
+
+  this[i++]='Sun'; this[i++]='Mon'; this[i++]='Tue';
+
+  this[i++]='Wed'; this[i++]='Thu'; this[i++]='Fri';
+
+  this[i++]='Sat';
+
+}
+
+
+
+// 最終更新日の日付を算出する
+
+function updateDate(){
+
+  var lm = document.lastModified;
+
+  var lmDate;
+
+
+
+  if(ie && ver<4){
+
+    // IE4 より前のブラウザは parse できない
+
+    var i,j,nm;
+
+    i=lm.indexOf(' ',0); j=lm.indexOf(' ',i+1);
+
+    nm ='' +lm.substring(i+1,j);
+
+    i=lm.indexOf(' ',j); j=lm.indexOf(' ',i+1);
+
+    nm+='/'+lm.substring(i+1,j);
+
+    i=lm.indexOf(' ',j); j=lm.indexOf(' ',i+1);
+
+    nm+='/'+lm.substring(j+1,lm.length)
+
+       +' '+lm.substring(i+1,j);
+
+    lmDate = new Date(Date.parse(nm));
+
+  } else {
+
+    var p,pd=Date.parse(document.lastModified);
+
+    if(!pd && (p=document.lastModified.indexOf(' JST'))!=-1){
+
+    // Linux版 NN4 では 'JST' 付きの文字列は parse できない
+
+      pd=Date.parse(document.lastModified.substring(0,p));
+
+    }
+
+    lmDate = new Date(pd);
+
+  }
+
+  // 年号は getFullYear メソッドがあれば、これを使用する
+
+  var y=lmDate.getFullYear?
+
+          lmDate.getFullYear():lmDate.getYear();
+
+  // Y2K問題の補正をする
+
+  var oy=y;
+
+  if(y< 100) y+=1900;
+
+  if(y<1980) y+= 100;
+
+  if(oy!=y) lmDate.setYear(y);
+
+  if(ie && ver<5 && navigator.appVersion.indexOf('MSIE 5')==-1){
+
+    // IE4以前のブラウザは地域化の考慮が欠けているので補正する
+
+    lmDate.setTime(
+
+      lmDate.getTime()-lmDate.getTimezoneOffset()*60*1000);
+
+  }
+
+  else if(mac && !ie && ver==4){
+
+    // Mac版 NN4も地域化の考慮が欠けているので補正する
+
+    // 但し、getTimezoneOffset の戻り値のフォーマットが異なる！
+
+    var tz=lmDate.getTimezoneOffset();
+
+    lmDate.setTime(
+
+      lmDate.getTime()+(parseInt(tz/100)*60+tz%100)*60*1000);
+
+  }
+
+  // 算出した最終更新日を文字列に成形して戻す
+
+  return y+'/'+(lmDate.getMonth()+1)+'/'+lmDate.getDate()
+
+        +'('+week[lmDate.getDay()]+') ';
+
+}
+
+// 最終更新日を出力する
+
+document.write('Last Update '+updateDate());
+
+
+
+}
+
+</SCRIPT>
+
+
+
+
+
+
+
+</HEAD>
+
+<BODY>
+
+<!-華原朋美-!>
+
+<SCRIPT>
+
+writeModified()
+
+</SCRIPT>
+
+<BR>
+
+<A NAME="Top"></A>
+
+<HR>
+
+
+
+<A NAME="link"></A>
+
+<H2>リンク</H2>
+
+<A HREF="
+https://chat.openai.com/chat
+" target="_blank">
+ChatGPT
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+
+<!- モバイル端末で使うためのリンク ここから -!>
+
+<A NAME="Mobile"></A>
+
+<!- ----------------------------------------------- -!>
+<HR>
+<A NAME="Menu"></A>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (1) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Google
+">
+Google
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (2) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Yahoo
+">
+Yahoo
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (3) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Books
+">
+Books
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (4) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Kado
+">
+Kado
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (6) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Tama
+">
+Tama
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (7) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Shop
+">
+Shop
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (13) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Kakoap
+">
+Kakoap
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<!- (13) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Kakofe
+">
+Kakofe
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<!- (13) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Study
+">
+Study
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<!- (8) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Phone
+">
+Phone
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (9) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+BankMoney
+">
+BankMoney
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (10) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+SNS
+">
+SNS
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (11) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Web
+">
+Web
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (5) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Insurance
+">
+Insurance
+<BR>
+<BR>
+
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<!- (12) -!>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Other
+">
+Other
+<BR>
+<BR>
+
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html
+" target="_blank">
+link5
+</A>
+
+<BR>
+<BR>
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Kakoap"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://www.ap-siken.com/
+" target="_blank">
+応用情報技術者過去問道場
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.ap-siken.com/apkakomon.php
+" target="_blank">
+応用情報技術者過去問道場（午前）
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.ap-siken.com/apkakomon_pm.php
+" target="_blank">
+応用情報技術者過去問道場(午後)
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.ap-siken.com/s/apkakomon.php
+" target="_blank">
+応用情報技術者過去問道場（モバイル）
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.ap-siken.com/s/sokuhou/
+" target="_blank">
+応用情報技術者過去問道場(速報)
+</A>
+
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Kakoap"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://www.pm-siken.com/
+" target="_blank">
+プロジェクトマネージャ試験ドットコム過去問道場
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.pm-siken.com/pmkakomon.php
+" target="_blank">
+プロジェクトマネージャ過去問道場
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Kakofe"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://www.fe-siken.com/
+" target="_blank">
+基本情報技術者過去問道場
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#
+Top
+">
+Top
+</A>
+
+<BR>
+<BR>
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Study"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://member.studying.jp/
+" target="_blank">
+STUDYing
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://www.ap-siken.com/apkakomon.php
+" target="_blank">
+応用情報技術者過去問道場
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.tac-school.co.jp/kouza_joho/sokuhou.html
+" target="_blank">
+令和6年度秋期 応用情報技術者試験 解答速報＆講評（TAC）
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.tac-school.co.jp/file/tac/kouza_joho/pdf/sokuhou/24f_ap_sokuhou.pdf
+" target="_blank">
+令和6年度秋期 応用情報技術者試験 午後解答（TAC）
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.tac-school.co.jp/file/tac/kouza_joho/pdf/sokuhou/24f_ap_kouhyou.pdf
+" target="_blank">
+令和6年度秋期 応用情報技術者試験 講評（TAC）
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://studying.jp/itstrategist/about.html
+" target="_blank">
+ITストラテジストとは？
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://fun-learning.jp/app/menus/jouhou_koudo
+" target="_blank">
+高度情報処理試験（午前Ⅰ）の過去問メニュー | 独学ステーション
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.ipa.go.jp/shiken/mondai-kaiotu/index.html
+" target="_blank">
+IPA 過去問解答
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://itee.ipa.go.jp/ipa/user/public/
+" target="_blank">
+IPA マイページ
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+
+<!- Menu -!>
+<!- ----------------------------------------------- -!>
+
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Phone"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://www.au.com/my-au/
+" target="_blank">
+(2)
+My auログイン｜au
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://my.ymobile.jp/muc/d/top
+" target="_blank">
+(3)
+My Y!mobile（マイワイモバイル） ホーム ｜ワイモバイル
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://www.nttdocomo.co.jp/mydocomo/index.html
+" target="_blank">
+(4)
+My docomo | NTTドコモ
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://mail.smt.docomo.ne.jp/
+" target="_blank">
+(4)
+ドコモメール(ブラウザ版) | NTTドコモ
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://login.eonet.jp/auth/Login/mineo?AS=sas&TYPE=33554433&REALMOID=06-0000c329-4b67-17c5-a8b2-8e550a21d08d&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=$SM$jN%2bR2ZhkZub%2fByM3wUojFDp7CE6TMtC0%2bDjep%2bphKOpEUUQF0T9GCesdEwApBEIdR42mJHrdWsLPpTgu9vkvUXH3vcgcicGw6onq4MAQQVoK4ElihmXQhzMJlDovQ32o&TARGET=$SM$HTTPS%3a%2f%2fmy%2emineo%2ejp%2fmvno_cp%2f
+" target="_blank">
+(5)
+ログイン | mineo
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://alsok.phoneappli.net/
+" target="_blank">
+PHONE APPLI PEOPLE
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Web"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://myportal.itc.softbank.jp/web/portal/login
+" target="_blank">
+(7)
+ソフトバンク 個人お客様向けサービス ODN 請求
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.odn.ne.jp/webmail/login.html
+" target="_blank">
+(7)
+ソフトバンク 個人お客様向けサービス ODN WEBメール
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://sso.nifty.com/pub/login.cgi?service=top&back=https%3a%2f%2fwww.nifty.com%2fniftop%2fcgi-bin%2fmiddle%2fredirect.cgi&am=1.3.0
+" target="_blank">
+(8)
+@niftyログイン：@nifty トップ
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.hatena.ne.jp/login
+" target="_blank">
+(9)
+ログイン - はてな
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://login.yahoo.co.jp/config/login
+" target="_blank">
+(22)
+ログイン - Yahoo! JAPAN
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://mr.jaf.or.jp/sso/frlogin.php?qServiceId=MYP01&qUrl=https%3A%2F%2Fwww.jaf.jp%2Fpc%2Fssologin%2F
+" target="_blank">
+(44)
+ログイン｜JAF
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://kyuyo.tayoreru.com/kyuyo/2a943d2/Login/Login_User.aspx
+" target="_blank">
+(45)
+たよれーる tayoreru
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://point.recruit.co.jp/member/pwbLogin/?path=c5b617c78c33d75633aa7029cab6aa23c00e08f1b0914cc28c4c249757ddf16b
+" target="_blank">
+(49)
+ログイン | Ponta Web［Pontaカード/Pontaポイント］
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.matsukiyo.co.jp/store/login
+" target="_blank">
+(51)
+ログイン | ドラッグストア マツモトキヨシ
+</A>
+
+<BR>
+<BR>
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="BankMoney"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://moneyforward.com/accounts
+" target="_blank">
+Money Foward(口座)
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://moneyforward.com/cf
+" target="_blank">
+Money Foward(入出金)
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://direct.smbc.co.jp/aib/aibgsjsw5001.jsp
+" target="_blank">
+(11)
+SMBCダイレクト
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://login.japannetbank.co.jp/wctx/50bc6afcfjc044960.do
+" target="_blank">
+(12)
+ログイン - ジャパンネット銀行
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://web.ib.mizuhobank.co.jp/servlet/mib?xtr=Emf00000 
+" target="_blank">
+(13)
+みずほダイレクト
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://card.surugabank.co.jp/Top.do
+" target="_blank">
+(14)
+会員ログイン スルガVISA
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.surugabank.co.jp/surugabank/index.html
+" target="_blank">
+(14)
+スルガ銀行｜SURUGA bank
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Insurance"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://netatm.sumitomolife.co.jp/natm/POS0/POJAS0003B.do
+" target="_blank">
+(6)
+スミセイダイレクトサービス｜住友生命
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://www.insurance.alsok.co.jp/tkoushin.html
+" target="_blank">
+(47)
+ALSOKグループ団体扱自動車保険Web更新｜ALSOK保険サービス株式会社
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://eb04.sjnk.co.jp/B50D/XAS/XASPFLBE001/XASBE001/XASBE001001FC01.aspx
+" target="_blank">
+(47)
+ログイン（認証）｜Clickar 自動車保険
+</A>
+
+<BR>
+<BR>
+
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="SNS"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://twitter.com/login?lang=ja
+" target="_blank">
+(16)
+Twitterにログイン
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://mixi.jp/login.pl?next_url=https%3A%2F%2Fmixi.jp%2Fhome.pl&from=drawer_menu
+" target="_blank">
+(17)
+ソーシャル・ネットワーキング サービス [mixi(ミクシィ)]
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.facebook.com/campaign/landing.php?campaign_id=1665596389&extra_1=s%7Cc%7C321610682142%7Ce%7Cfacebook%20%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%7C&placement=&creative=321610682142&keyword=facebook%20%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&partner_id=googlesem&extra_2=campaignid%3D1665596389%26adgroupid%3D65075436380%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D1t1%26target%3D%26targetid%3Dkwd-309772192975%26loc_physical_ms%3D1009246%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiAjfvwBRCkARIsAIqSWlNXWAL-PXRKZOlsoXs--837fftn5NUBB8qIeEacN5jd7WxZnEU2sqsaApSREALw_wcB
+" target="_blank">
+(18)
+Facebookに登録 | Facebook
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://ja.swarmapp.com/
+" target="_blank">
+(19)
+Swarm | すべての場所を忘れずに。4sq
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.tumblr.com/login?language=ja_JP
+" target="_blank">
+(20)
+ログイン | Tumblr
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://www.instagram.com/accounts/login/?hl=ja
+" target="_blank">
+(24)
+ログイン  Instagram
+</A>
+
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Books"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://ebookjapan.yahoo.co.jp/books/525762/
+" target="_blank">
+キン肉マン
+</A>
+
+
+<BR>
+<BR>
+
+<A HREF="
+https://ebookjapan.yahoo.co.jp/search/?keyword=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3&useTitle=0&sort=recent
+" target="_blank">
+キン肉マン(old)
+</A>
+
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://ebookjapan.yahoo.co.jp/
+" target="_blank">
+無料まんが・試し読みが豊富！ebookjapan｜まんが（漫画）・電子書籍をお得に買うなら、無料で読むならebookjapan
+</A>
+
+
+<BR>
+<BR>
+
+<A HREF="
+https://shonenjumpplus.com/episode/10834108156708274394
+" target="_blank">
+[72話]終末のハーレム - LINK/宵野コタロー | 少年ジャンプ＋
+</A>
+
+<BR>
+<BR>
+
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+<!- ----------------------------------------------- -!>
+<A NAME="Google"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+http://www.google.com/
+" target="_blank">
+Google
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+http://mail.google.com/mail/?hl=ja&tab=wm#inbox
+" target="_blank">
+Gmail
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://mail.google.com/mail/u/0/?hl=ja&tab=wm#settings/accounts
+" target="_blank">
+Gmail　account
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://mail.google.com/mail/u/0/?hl=ja&tab=wm#search/l%3Admm+from%3Ame
+" target="_blank">
+Gmail　l:dmm from:me
+</A>
+
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+
+<A HREF="
+https://mail.google.com/mail/u/0/?hl=ja&tab=wm#spam
+" target="_blank">
+Gmail　Spam
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+http://docs.google.com/?tab=yo#all
+" target="_blank">
+Googleドキュメント
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.google.com/calendar/render?tab=cc
+" target="_blank">
+Google カレンダー
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://aistudio.google.com/prompts/new_chat
+" target="_blank">
+Google AI Studio
+</A>
+
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+<A HREF="
+https://keep.google.com/u/0
+" target="_blank">
+Google Keeps
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://remotedesktop.google.com/access/
+" target="_blank">
+chrome リモートデスクトップ
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.youtube.com/
+" target="_blank">
+YouTube
+</A>
+<BR>
+<BR>
+
+
+<A HREF="
+http://gmail.1o4.jp/operators.html
+" target="_blank">
+GMAILの検索演算子一覧
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Shop"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="
+https://www.biccamera.com/bc/main/
+" target="_blank">
+(23)
+ビックカメラ | ログイン
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://order.yodobashi.com/yc/login/index.html?returnUrl=https%3A%2F%2Fwww.yodobashi.com%2F%3Futm_source%3Dyahoo%26utm_medium%3Dcpc%26utm_term%3D%25E3%2583%25A8%25E3%2583%2589%25E3%2583%2590%25E3%2582%25B7%25E3%2582%25AB%25E3%2583%25A1%25E3%2583%25A9%26utm_campaign%3D%25E3%2583%25A8%25E3%2583%2589%25E3%2583%2590%25E3%2582%25B7%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2589%26yclid%3DYSS.1000089595.EAIaIQobChMIgrOohO-85gIVWqSWCh2ZawXsEAAYASAAEgL1m_D_BwE
+" target="_blank">
+(50)
+ログイン：ヨドバシ・ドット・コム
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.amazon.co.jp/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=jpflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp%2Fref%3Dnav_signin&switch_account=
+" target="_blank">
+(31)
+Amazonログイン
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.printing.ne.jp/index_p.html
+" target="_blank">
+(99)
+セブン‐イレブンで簡単プリント ～ネットプリント(個人のお客様)～
+</A>
+
+<BR>
+<BR>
+
+
+<A HREF="
+https://www.app.kurashi.tepco.co.jp/
+" target="_blank">
+(99)
+東京電力
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Other"></A>
+<!- ----------------------------------------------- -!>
+
+<BR>
+
+<A HREF="http://www.hahoo.jp/KEISANKI/" target="_blank">医療費控除簡易計算</A>
+
+<BR>
+<BR>
+
+<A HREF="http://movapic.com/okadakantoku" target="_blank">okadakantoku(okadakantoku)の携帯百景</A>
+
+<BR>
+<BR>
+
+
+
+<HR>
+
+
+
+<BR>
+<BR>
+
+
+<HR>
+<BR>
+
+<A HREF="http://www5d.biglobe.ne.jp/Jusl/Keisanki/Risoku/risoku.html" target="_blank">利息計算</A>
+
+<BR>
+<BR>
+
+<A HREF="http://labaq.com/archives/51650825.html" target="_blank">これは画期的！その場であっという間に鼻づまりを治す方法:らばQ</A>
+
+<BR>
+<BR>
+
+
+
+<HR>
+
+
+
+<BR>
+<BR>
+
+
+
+
+<HR>
+
+
+
+<BR>
+<BR>
+
+<A HREF="https://www.nttdocomo.co.jp/product/ky01l/?xcid=CRP_PRD_ky01l_from_OLS_PRD_imode_ky01l&crpga_cid=GA1.4.1607050425.1574128984" target="_blank">カードケータイ KY-01L | ケータイ | 製品 | NTTドコモ</A>
+
+<BR>
+<BR>
+
+<A HREF="https://gucchi23.net/blog/archives/7423" target="_blank">【ドコモ】1,200円で持てる「ケータイプラン」への持ち込み契約が可能に！注意書きが変更 | gucchi23 blog</A>
+
+<BR>
+<BR>
+
+<A HREF="https://toyokeizai.net/articles/-/301602" target="_blank">楽天モバイル｢格安プラン｣だけで勝てない理由 | 通信 | 東洋経済オンライン | 経済ニュースの新基準</A>
+
+<BR>
+<BR>
+
+<A HREF="https://hoken.kakaku.com/insurance/gma/article/1002.html" target="_blank">価格.com - 確定申告　医療費控除の対象と還付金の計算方法 | 医療保険の選び方・比較方法</A>
+
+<BR>
+<BR>
+
+<A HREF="https://bitwave.showcase-tv.com/docomo-nesage-sp/?amp=1" target="_blank">ドコモで値下げされたスマホリスト｜安くて性能が良い機種はこれだ！</A>
+
+<BR>
+<BR>
+
+<A HREF="https://headlines.yahoo.co.jp/hl?a=20191118-00010001-ffield-bus_all" target="_blank">共働き夫婦の疑問！ 確定申告をするなら、どっちの名義がお得？（1）（ファイナンシャルフィールド） - Yahoo!ニュース</A>
+
+<BR>
+<BR>
+
+<A HREF="https://www.itmedia.co.jp/mobile/articles/1911/15/news039.html" target="_blank">楽天モバイルは12月までに基地局6500局を確保する見込み――三木谷社長「ほぼつながるようになる」と自信アリ - ITmedia Mobile</A>
+
+<BR>
+<BR>
+
+
+
+<HR>
+
+
+
+<BR>
+<BR>
+
+<A HREF="http://miya.s16.xrea.com/yangus/quiz.html" target="_blank">ゲルダのクイズ／少年ヤンガス攻略</A>
+
+<BR>
+<BR>
+
+<A HREF="http://miya.s16.xrea.com/yangus/dungeon/10daisuido.html" target="_blank">おそろしの大水道／続編／少年ヤンガス攻略</A>
+
+<BR>
+<BR>
+
+
+
+<HR>
+
+
+
+<BR>
+<BR>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+
+<!- ----------------------------------------------- -!>
+<A NAME="Kado"></A>
+<!- ----------------------------------------------- -!>
+
+<A HREF="https://tora-ana.jp/detail.php?id=11247" target="_blank">田中ねね | 渋谷デリヘル風俗 CLUB 虎の穴 青山店</A>
+
+<BR>
+<BR>
+
+<A HREF="https://www.cityheaven.net/tokyo/A1303/A130301/toranoana/girlid-35851109/?pcmode=sp" target="_blank">「田中ねね」CLUB虎の穴青山店 - 渋谷/デリヘル｜シティヘブンネット</A>
+
+<BR>
+<BR>
+
+<A HREF="https://www.cityheaven.net/chiba/A1203/A120302/mken/girlid-40700379/?pcmode=sp" target="_blank">「あゆ」松戸角海老根本店 - 松戸/ソープ｜シティヘブンネット</A>
+
+<BR>
+<BR>
+
+<A HREF="https://www.cityheaven.net/chiba/A1203/A120302/mken/?pcmode=sp" target="_blank">松戸角海老根本店｜松戸　ソープ｜シティヘブンネット</A>
+
+<BR>
+<BR>
+
+<A HREF="https://www.cityheaven.net/chiba/A1203/A120302/mke/?pcmode=sp" target="_blank">松戸角海老岩瀬店｜松戸　ソープ｜シティヘブンネット</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+<BR>
+<BR>
+
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+https://www.dmm.co.jp/monthly/premium/-/list/search/=/sort=date/view=text/?searchstr=%E7%94%B0%E4%B8%AD%E3%81%AD%E3%81%AD
+" target="_blank">
+月額動画 > 見放題ch デラックス > 田中ねね
+<BR>
+<BR>
+<!- ----------------------------------------------- -!>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+https://www.dmm.co.jp/monthly/premium/-/bookmark/=/limit=120/view=text/page=1/
+" target="_blank">
+FANZA bookmark (Text)
+<BR>
+<BR>
+<!- ----------------------------------------------- -!>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+https://www.dmm.co.jp/monthly/premium/-/bookmark/
+" target="_blank">
+FANZA bookmark
+<BR>
+<BR>
+<!- ----------------------------------------------- -!>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+https://www.dmm.co.jp/monthly/premium/-/bookmark/=/page=34/
+" target="_blank">
+FANZA bookmark Page 34
+<BR>
+<BR>
+<!- ----------------------------------------------- -!>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+https://www.dmm.co.jp/monthly/premium/-/bookmark/=/page=33/
+" target="_blank">
+FANZA bookmark Page 33
+<BR>
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+
+<A HREF="https://noc.syosetu.com/search/search/search.php?word=%E4%B8%AD%E3%81%A0%E3%81%97&notword=&type=&mintime=&maxtime=&minlen=&maxlen=&min_globalpoint=&max_globalpoint=&minlastup=&maxlastup=&minfirstup=&maxfirstup=&order=new" target="_blank">ノクターンノベルズ?||?検索</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://www.xvideos.com/
+" target="_blank">
+xvideos.com
+</A>
+
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+<HR>
+
+
+<BR><BR>
+
+<A HREF="http://www.google.com/" target="_blank">google</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://mail.google.com/mail/?hl=ja&tab=wm#inbox" target="_blank">GMAIL</A>
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://mail.google.com/mail/u/0/?hl=ja&tab=wm#settings/accounts" target="_blank">GMAIL　account</A>
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://mail.google.com/mail/u/0/?hl=ja&tab=wm#spam" target="_blank">GMAIL　Spam</A>
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://docs.google.com/?tab=yo#all" target="_blank">Googleドキュメント</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.google.co.jp/reader/view/?tab=my#overview-page" target="_blank">Google リーダー</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.google.com/calendar/render?tab=cc" target="_blank">Google カレンダー</A>
+
+
+
+
+
+
+
+<HR>
+
+
+
+
+
+<BR><BR>
+
+<A HREF="http://twitter.com/" target="_blank">twitter</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://twitter.com/osunekotaro_tr" target="_blank">twitter(osunekotaro_tr)</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://twilog.org/okadakantoku/" target="_blank">twilog</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://twilog.org/osunekotaro_tr/" target="_blank">twilog(osunekotaro_tr)</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://twilog.org/osunekotaro_tr6/" target="_blank">twilog(osunekotaro_tr6)</A>
+
+
+
+
+
+<HR>
+
+<HR>
+<!- ----------------------------------------------- -!>
+<A NAME="Yahoo"></A>
+<!- ----------------------------------------------- -!>
+
+<BR><BR>
+
+<A HREF="http://transit.yahoo.co.jp/" target="_blank">YAHOO! 路線</A>
+
+
+<BR><BR>
+<A HREF="http://weather.yahoo.co.jp/weather/jp/13/4410.html" target="_blank">YAHOO! 東京の天気</A>
+
+
+
+<BR><BR>
+
+<A HREF="http://baseball.yahoo.co.jp/npb/" target="_blank">YAHOO! JAPAN プロ野球</A>
+
+<BR><BR>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+
+<HR>
+
+
+
+
+
+<BR><BR>
+
+<A HREF="https://direct.smbc.co.jp/aib/aibgsjsw5001.jsp" target="_blank">三井住友銀行ログイン</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://login.japannetbank.co.jp/login_L.html" target="_blank">ジャパンネット銀行｜ログイン｜</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://netatm.sumitomolife.co.jp/natm/POS0/POJAS0003B.do" target="_blank">スミトモセイメイログイン</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://web.ib.mizuhobank.co.jp/servlet/mib?xtr=Emf00000" target="_blank">みずほ</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://ib.surugabank.co.jp/im/IBGate" target="_blank">スルガ銀行ログイン</A>
+
+
+
+
+
+
+
+
+
+
+
+<HR>
+
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://favolog.org/okadakantoku" target="_blank">favlog</A>
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.facebook.com/" target="_blank">Facebook</A>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<!- ----------------------------------------------- -!>
+<A NAME="Tama"></A>
+<!- ----------------------------------------------- -!>
+<A HREF="https://www.task-asp.net/cu/eg/ykr132241.task" target="_blank">多摩市施設予約(新)</A>
+
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link5.html#Top
+">
+Top
+<BR>
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://foursquare.com/" target="_blank">foursquare</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.odn.ne.jp/webmail/login.html" target="_blank">ODN WEBメールログイン画面(http)</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.odn.ne.jp/webmail/login.html" target="_blank">ODN WEBメールログイン画面(https)</A>
+
+<BR><BR><BR><BR>
+<A HREF="https://myportal.itc.softbank.jp/web/portal/login" target="_blank">ODN 請求ログイン画面</A>
+
+
+
+<HR>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.nttdocomo.co.jp/mydocomo/index.html" target="_blank">My docomo</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://mail.smt.docomo.ne.jp/" target="_blank">docomo　WEBメール</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://cs.kddi.com/support/login.html" target="_blank">My au</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://my.softbank.jp/msb/d/top" target="_blank">My Softbank</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://sso.nifty.com/pub/login.cgi?service=sptweb05&back=https%3a%2f%2fsupport.nifty.com%2fsupportphp%2fwimax_packet.php&am=1.2.0" target="_blank">会員サポート > @nifty WiMAXのお手続き : @nifty</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://my.mineo.jp/mvno_cp/GCC010501GCC010501_Init.action?CT_ORIG_URL=%2Fmvno_cp%2F&ct_orig_uri=%2Fmvno_cp%2F" target="_blank">mineo</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://my.ymobile.jp/muc/d/top" target="_blank">Y!Mobile(Willcom)</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://webmy.ymobile.jp/portal/" target="_blank">Y!Mobile(EM)</A>
+
+
+<HR>
+
+<BR><BR><BR><BR>
+
+<A HREF="https://login.eonet.jp/auth/Login/mineo?AS=sas&TYPE=33554433&REALMOID=06-0000c329-4b67-17c5-a8b2-8e550a21d08d&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=$SM$5dXX4gJhfvSvcXHV3QGLML3TYXCt4hxnsrNtUKqOvwmHpJVLJpZ3H0%2bAgZexEQovWFgyI0ELCARZBGeqIC1hvcZvsaswNBekwpwohDCoegJNz3Wz8z5vdoqJbTe62H78&TARGET=$SM$HTTPS%3a%2f%2fmy%2emineo%2ejp%2fmvno_cp%2f" target="_blank">mineo ログイン</A>
+
+<BR><BR><BR><BR>
+
+<A HREF="http://support.mineo.jp/setup/guide/ios_network.html" target="_blank">mineoの構成ファイルDLリンク追加</A>
+
+
+<HR>
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.hatena.ne.jp/login" target="_blank">はてなブログ</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://osunekotaro.hatenablog.com/" target="_blank">はてなブログ(osunekotaro)</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://osunekotaro-novel.hatenablog.com/" target="_blank">はてなブログ(novel 非公開)</A>
+
+
+<BR><BR><BR><BR>
+
+<HR>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.amazon.co.jp/" target="_blank">Amazon</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.yodobashi.com/index.html" target="_blank">ヨドバシ</A>
+
+
+<HR>
+
+
+<!- モバイル端末で使うためのリンク ここまで -!>
+
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 通常のブラウザで使うためのリンク ここから -!>
+
+<A NAME="Web"></A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="#Top">トップへ</A>
+
+
+<BR><BR>
+
+<A HREF="#Mobile">モバイル端末へ</A>
+
+<BR><BR>
+
+
+
+<!- 通常のブラウザで使うためのリンク ここまで -!>
+
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- よく使うリンク -!>
+
+<A HREF="http://www.google.com/" target="_blank">google</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://twitter.com/" target="_blank">twitter</A>
+
+
+
+
+
+<A HREF="http://twitter.com/#favorites" target="_blank">twitter お気に入り</A>
+
+
+
+<A HREF="http://twitter.com/followers" target="_blank">twitter フォローされている</A>
+
+
+
+<A HREF="http://twitter.com/okadakantoku/following" target="_blank">twitter フォローしている</A>
+
+
+
+<A HREF="http://twitter.com/okadakantoku/lists/memberships" target="_blank">twitter あなたをフォローしているリスト</A>
+
+
+
+<A HREF="http://twitter.com/okadakantoku/lists" target="_blank">twitter あなたがフォローしているリスト</A>
+
+
+
+
+
+<A HREF="http://favotter.matope.com/" target="_blank">ふぁぼったー</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://www.mcdonalds.co.jp/sales/new/smileplus/index.php" target="_blank">マクドナルドクーポン</A>
+
+
+
+<BR>
+
+<BR>
+
+<A HREF="http://twilog.org/okadakantoku/" target="_blank">twilog</A>
+
+
+
+<BR>
+
+<BR>
+
+<A HREF="http://twilog.org/okadakantoku/stats/" target="_blank">twilog stats</A>
+
+
+
+
+
+<BR>
+
+
+
+<HR>
+
+
+
+<A HREF="http://baseball.yahoo.co.jp/npb/" target="_blank">YAHOO! JAPAN プロ野球</A>
+
+<HR>
+
+
+
+<A HREF="http://mixi.jp/show_log.pl" target="_blank">mixi最近の足あと</A>
+
+<HR>
+
+
+
+<A HREF="http://www.bloglines.com/myblogs" target="_blank">bloglines</A>
+
+<HR>
+
+
+
+<A HREF="http://osunekotaro.server.co.jp/" target="_blank">YourServer(osunekotaro)</A>
+
+<HR>
+
+
+
+<A HREF="https://secure.logmein.com/home.asp" target="_blank">LogMeIn</A>
+
+<HR>
+
+<A HREF="http://www.google.co.jp/reader/view/?tab=my#overview-page" target="_blank">Google リーダー</A>
+
+<HR>
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+
+
+
+<!- 検索 -!>
+
+<A NAME="search"></A>
+
+<A HREF="http://www.google.com/" target="_blank">google</A>
+
+
+
+
+
+<A HREF="http://mail.google.com/mail/?hl=ja&tab=wm#inbox" target="_blank">GMAIL</A>
+
+
+
+
+
+<A HREF="http://gmail.1o4.jp/operators.html" target="_blank">GMAILの検索演算子一覧</A>
+
+
+
+<A HREF="http://docs.google.com/?tab=yo#all" target="_blank">Googleドキュメント</A>
+
+
+
+<A HREF="http://spreadsheets.google.com/viewform?formkey=cDVDZmt0ZV9hZUYzbDk3enlaVm5JRmc6MA.." target="_blank">新家計簿</A>
+
+
+
+<A HREF="http://oshiete.goo.ne.jp/" target="_blank">教えてgoo</A>
+
+
+
+
+
+<A HREF="http://www.tvguide.or.jp/TF1101LS.php?date=20080505&regionId=13&mediaId=1&packId=107&stationId=&time=12&dispflg=0&page=1" target="_blank">インターネットTVガイド</A>
+
+
+
+
+
+
+
+<HR>
+
+
+
+<!- mixi -!>
+
+<A NAME="mixi"></A>
+
+
+
+<A HREF="http://mixi.jp/" target="_blank">mixi</A>
+
+
+
+<A HREF="http://mixi.jp/show_log.pl" target="_blank">mixi最近の足あと</A>
+
+
+
+<A HREF="http://mixi.jp/edit_account.pl" target="_blank">mixi設定</A>
+
+
+
+
+
+<A HREF="http://mixi.jp/list_diary.pl" target="_blank">mixi日記一覧</A>
+
+
+
+<A HREF="http://mixi.jp/list_community.pl?id=1587321" target="_blank">mixiコミュ一覧(監督)</A>
+
+
+
+
+
+<A HREF="http://mixi.jp/list_comment.pl" target="_blank">mixi最近のコメント一覧</A>
+
+
+
+<BR>
+
+<A HREF="http://mixi.jp/view_community.pl?id=2761509" target="_blank">mixiコミュ(チームユニット)</A>
+
+
+
+<A HREF="http://mixi.jp/view_community.pl?id=1198460" target="_blank">mixiコミュ(MZ3/MZ4 -Mixi for ZERO3-)</A>
+
+
+
+
+
+<A HREF="http://news.mixi.jp/list_news.pl" target="_blank">mixiNEWS一覧</A>
+
+
+
+<A HREF="http://mixi.jp/show_calendar.pl" target="_blank">mixiカレンダー</A>
+
+
+
+
+
+<A HREF="http://news.mixi.jp/search_news.pl?keyword=%BA%E5%BF%C0&category_id=0&x=0&y=0" target="_blank">mixiNEWS(阪神)</A>
+
+
+
+<A HREF="http://news.mixi.jp/search_news.pl?keyword=%BA%E5%BF%C0%20%A5%C7%A5%A4%A5%EA%A1%BC&x=38&y=17&category_id=0" target="_blank">mixiNEWS デイリー(阪神)</A>
+
+
+
+<BR>
+
+<A HREF="http://mixi.jp/list_bookmark.pl?page=1&kind=community" target="_blank">[mixi] お気に入り(1ページ)</A>
+
+
+
+<A HREF="http://mixi.jp/list_bookmark.pl?page=2&kind=community" target="_blank">[mixi] お気に入り(2ページ)</A>
+
+
+
+<A HREF="http://mixi.jp/show_self_log.pl" target="_blank">[mixi] 自分の足あと</A>
+
+
+
+
+
+
+
+<BR>
+
+<BR>
+
+<BR>
+
+<BR>
+
+
+
+<A HREF="https://mixi.jp/edit_account.pl?detail" target="_blank">[mixi] その他設定</A>
+
+
+
+<BR>
+
+<BR>
+
+<BR>
+
+<BR>
+
+
+
+
+
+
+
+<HR>
+
+
+
+<A HREF="http://homepage3.nifty.com/osunekotaro/menu.html" target="_blank">HOMEPAGE(Nifty)</A>
+
+
+
+<A HREF="http://8525.teacup.com/osunekotaro/bbs" target="_blank">osunekotaro</A>
+
+
+
+
+
+<HR>
+
+<A HREF="http://red.ap.teacup.com/osunekotaro/" target="_blank">osunekotaro blog</A>
+
+
+
+<A HREF="http://air.ap.teacup.com/osunekotaro/" target="_blank">osunekotaro blog(2005/09/10)写真</A>
+
+
+
+<A HREF="http://fine.ap.teacup.com/osunekotaro/" target="_blank">osunekotaro blog link用</A>
+
+
+
+
+
+<A HREF="http://blog.goo.ne.jp/osunekotaro" target="_blank">osunekotaro blog link用(goo)</A>
+
+
+
+<A HREF="http://www.bloglines.com/myblogs" target="_blank">bloglines</A>
+
+
+
+
+
+
+
+<HR>
+
+
+
+<!- NEWS & STORY -!>
+
+<A NAME="newsstory"></A>
+
+<A HREF="http://www.ninomiyasports.com/" target="_blank">二宮清純</A>
+
+
+
+<A HREF="http://www.sponichi.co.jp/baseball/special/calender/index.html" target="_blank">スポニチ（日めくり）</A>
+
+
+
+
+
+<A HREF="http://daily.jp/tigers/" target="_blank">デイリー（タイガース）</A>
+
+
+
+<A HREF="http://www.nikkansports.com/" target="_blank">日刊スポーツ</A>
+
+
+
+<A HREF="https://www.task-asp.net/cu/eg/ykr132241.task" target="_blank">多摩市施設予約(新)</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://chouseisan.com/schedule/List?h=aa5abf5985b36d361c223383c78ee126" target="_blank">レッチキスケジュール2010/01/26</A>
+
+<BR>
+
+
+
+
+
+<HR>
+
+
+
+<A HREF="http://www.hanshintigers.jp/" target="_blank">阪神タイガース</A>
+
+
+
+<A HREF="http://www.hanshintigers.jp/wada/index.html" target="_blank">虎の意地 和田豊</A>
+
+
+
+<A HREF="http://hoshino.ntciis.ne.jp/" target="_blank">トラトラトラ 星野仙一</A>
+
+
+
+
+
+<A HREF="http://www.k-igawa.com/" target="_blank">K29</A>
+
+
+
+
+
+<HR>
+
+<A HREF="http://www.yahoo.co.jp/" target="_blank">YAHOO! JAPAN</A>
+
+
+
+<A HREF="http://sports.yahoo.co.jp/" target="_blank">YAHOO! JAPAN SPORTS</A>
+
+
+
+
+
+<A HREF="http://baseball.yahoo.co.jp/npb/" target="_blank">YAHOO! JAPAN プロ野球</A>
+
+
+
+<A HREF="http://transit.yahoo.co.jp/" target="_blank">YAHOO! 路線</A>
+
+
+
+<A HREF="http://weather.yahoo.co.jp/weather/" target="_blank">YAHOO! 天気</A>
+
+
+
+
+
+<A HREF="http://days.yahoo.co.jp/" target="_blank">YAHOO! DAYS</A>
+
+
+
+<BR>
+
+<A HREF="http://my.yahoo.co.jp/" target="_blank">MY YAHOO!</A>
+
+
+
+
+
+<A HREF="http://briefcase.yahoo.co.jp/" target="_blank">YAHOO!ブリーフケース</A>
+
+
+
+<A HREF="http://www.msn.co.jp/home.htm" target="_blank">MSN</A>
+
+<HR>
+
+
+
+<!- SHOP -!>
+
+<A NAME="shop"></A>
+
+
+
+<A HREF="http://auctions.yahoo.co.jp/" target="_blank">ヤフーオークション</A>
+
+
+
+<A HREF="http://user.auctions.yahoo.co.jp/jp/show/mystatus" target="_blank">ヤフーMYオークション</A>
+
+
+
+
+
+<A HREF="http://user.auctions.yahoo.co.jp/jp/show/mystatus?select=closed" target="_blank">終了分</A>
+
+
+
+
+
+<HR>
+
+<A HREF="http://user.auctions.yahoo.co.jp/jp/show/mystatus?select=watchlist&watchclosed=0" target="_blank">ウォッチリスト（開催中）</A>
+
+
+
+<A HREF="http://user.auctions.yahoo.co.jp/jp/show/mystatus?select=watchlist&s1=end&watchclosed=1" target="_blank">ウォッチリスト（終了分）</A>
+
+
+
+<A HREF="http://user.auctions.yahoo.co.jp/jp/show/mystatus?select=selling" target="_blank">出品中</A>
+
+
+
+
+
+<HR>
+
+<A HREF="http://www.yodobashi.com/" target="_blank">ヨドバシ</A>
+
+
+
+
+
+<A HREF="http://www.seiyu.co.jp/index.shtml" target="_blank">西友</A>
+
+
+
+<A HREF="http://www.dnp-orikomio.com/CGI/an/z_tenpo.cgi?kid=ancsei03&sid=120&hash=211cbf9ceb48f90144c885b8c9a89deb" target="_blank">西友(広告)</A>
+
+
+
+
+
+<A HREF="http://www.7dream.com/" target="_blank">7.com</A>
+
+
+
+<A HREF="http://www.ampm.co.jp/home.html" target="_blank">ampm</A>
+
+
+
+
+
+<A HREF="http://www.enetcom.co.jp" target="_blank">e-net</A>
+
+
+
+<A HREF="http://www.easyseek.net/" target="_blank">easyseekオークション</A>
+
+
+
+
+
+
+
+<BR>
+
+<HR>
+
+
+
+<!- TV -!>
+
+<A NAME="tv"></A>
+
+<A HREF="http://world.tvnet.ne.jp/tvlan/default.asp" target="_blank">ＴＶＤＢ</A>
+
+
+
+<A HREF="http://www.tvguide.or.jp/cgi-bin/top.cgi" target="_blank">ＴＶガイド</A>
+
+
+
+<HR>
+
+
+
+
+
+<!- 有線 -!>
+
+<A NAME="yusen"></A>
+
+<A HREF="http://www.usen440.com/" target="_blank">有線ホームページ</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/simple/simple.html" target="_blank">Simple List</A>
+
+<BR>
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/songlist.cgi?ch=A26" target="_blank">AE-26 J-POP（USEN440 Hits）</A>
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/songlist.cgi?ch=I34" target="_blank">I-34  タイムマシン　チャートタイムマシンJ-POP</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/songlist.cgi?ch=B07" target="_blank">BF-07 アーティストセレクション　MONTHLY List</A>
+
+
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/songlist.cgi?ch=B08" target="_blank">BF-08 アーティストセレクション　WEEKLY List</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/songlist.cgi?ch=B13" target="_blank">BF-13 90'S Hits</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/songlist.cgi?ch=B34" target="_blank">BF-34 2000'S Hits</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/onair.cgi?band=A&channel=26&max=12" target="_blank">AE-26</A>
+
+
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/onair.cgi?band=A&channel=29&max=12" target="_blank">AE-29 Oricon</A>
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/onair.cgi?band=I&channel=34&max=12" target="_blank">I-34</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/onair.cgi?band=B&channel=7&max=12" target="_blank">BF-07 アーティストセレクション　MONTHLY Now</A>
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/onair.cgi?band=B&channel=8&max=12" target="_blank">BF-08 アーティストセレクション　WEEKLY Now</A>
+
+<BR>
+
+
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/onair.cgi?band=B&channel=13&max=12" target="_blank">BF-13 90'S Hits(Check用)</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/onair.cgi?band=B&channel=34&max=12" target="_blank">BF-34 2000'S Hits(Check用)</A>
+
+
+
+<BR>
+
+<HR>
+
+
+
+
+
+<HR>
+
+<!- ORICON -!>
+
+<A NAME="oricon"></A>
+
+<A HREF="http://www.oricon.co.jp" target="_blank">ＯＲＩＣＯＮホームページ</A>
+
+<A HREF="http://www.oricon.co.jp/ranking/" target="_blank">ＯＲＩＣＯＮランキング</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://www.oricon.co.jp/rank/js/w/" target="_blank">ＯＲＩＣＯＮシングル</A>
+
+
+
+<A HREF="http://www.oricon.co.jp/rank/ja/w/" target="_blank">ＯＲＩＣＯＮアルバム</A>
+
+
+
+
+
+
+
+<BR>
+
+<A HREF="http://www2.oricon.co.jp/search/" target="_blank">ＯＲＩＣＯＮ ＳＥＡＲＣＨ</A>
+
+
+
+<HR>
+
+<!- 銀行 -!>
+
+<A NAME="bank"></A>
+
+<A HREF="https://direct.smbc.co.jp/aib/aibgsjsw5001.jsp" target="_blank">三井住友銀行ログイン</A>
+
+
+
+
+
+<A HREF="http://direct.smbc.co.jp/" target="_blank">三井住友銀行</A>
+
+
+
+<A HREF="http://www.japannetbank.co.jp/" target="_blank">Japan Net Bank</A>
+
+
+
+<A HREF="https://www.japannetbank.co.jp/login.html" target="_blank">Japan Net Bank ログイン</A>
+
+
+
+<A HREF="https://netatm.sumitomolife.co.jp/natm/POS0/POJAS0003B.do" target="_blank">スミトモセイメイログイン</A>
+
+
+
+<A HREF="http://www.sanwabank.co.jp/ippan/tempo/index.html" target="_blank">三和銀行</A>
+
+
+
+
+
+
+
+
+
+<BR>
+
+
+
+<HR>
+
+
+
+<!- LIFE -!>
+
+<A NAME="life"></A>
+
+<A HREF="http://www.ch5.com/cgi-bin/li-rakugaki.cgi" target="_blank">ライフＢＢＳ</A>
+
+
+
+<A HREF="http://member.nifty.ne.jp/THE_LIFE/" target="_blank">ライフHP</A>
+
+
+
+<BR>
+
+<A HREF="http://www.geocities.co.jp/Outdoors-Marine/7766/" target="_blank">ＤＡＮＩＥＬ ｗｅｂ ｓｉｔｅ</A>
+
+
+
+<A HREF="http://www0.yapeus.com/users/danny3104/" target="_blank">DANIEL DIARY</A>
+
+
+
+
+
+
+
+<A HREF="http://www.journey-k.com/cgi-bin/mbs/chiba/gb.cgi?room=danny" target="_blank">ＤＡＮＮＹｓ ＢＡＲ ～ｂｂｓ</A>
+
+
+
+<A HREF="http://yaplog.jp/danny3104/" target="_blank">闘魂ＤＡＮＩＥＬ(ブログ)</A>
+
+
+
+<A HREF="http://www.geocities.co.jp/Outdoors-Marine/7766/geodiary.html" target="_blank">ダニエル TODAY</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/life/" target="_blank">ライフ画像Top</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/life/LIFE01.html" target="_blank">ライフ画像01</A>
+
+
+
+
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/life/LIFE0001.html" target="_blank">ライフ画像0001</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/life/20010720/LIFE0002.html" target="_blank">ライフ画像0002</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/life/20011006/00000001.html" target="_blank">ライフ画像 坂口&塩崎</A>
+
+
+
+<BR>
+
+<A HREF="http://blog.hmcafe.com/" target="_blank">丸嶋啓嗣のブログ</A>
+
+
+
+<HR>
+
+<!- Red Chickens -!>
+
+
+
+<A NAME="redchickens"></A>
+
+
+
+<A HREF="http://www.tcup3.com/317/redchickens.html" target="_blank">RC BBS</A>
+
+
+
+<A HREF="http://www.tcup3.com/cgi-localbin/317/redchickens.cgi?m=i" target="_blank">RC BBS(i/j-sky)</A>
+
+<BR>
+
+<A HREF="http://www.geocities.jp/re_chik/index.html" target="_blank">RC HP</A>
+
+<BR>
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/kaitori.html" target="_blank">貝取南説明</A>
+
+<BR>
+
+<A HREF="http://8411.teacup.com/okada/bbs" target="_blank">多摩大WINS BBS</A>
+
+<BR>
+
+
+
+<A HREF="http://www.kusamado.com/index.html" target="_blank">草野球の窓(New)</A>
+
+
+
+<BR>
+
+<A HREF="http://www.asahi-net.or.jp/~hd9h-mtym/" target="_blank">草野球の窓(Old)</A>
+
+<BR>
+
+
+
+<A HREF="http://www.geocities.co.jp/Athlete-Acropolis/4100/" target="_blank">BIG Mouth HP</A>
+
+<BR>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/SCHEDULE.html" target="_blank">野球場予定</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/RIREKI2001.html" target="_blank">野球履歴</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/20010902/20010902.html" target="_blank">2001/09/02 合宿風景</A>
+
+
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/20010901/20010901.html" target="_blank">2001/09/01 合宿風景</A>
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/20010825/20010825.html" target="_blank">2001/08/25 練習風景</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/20010804/album00001.htm" target="_blank">2001/08/04 vs ビックマウス</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/RC-GAZOU20001202.html" target="_blank">2000/12/02 vs スクウェア</A>
+
+
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/Rcmember/ALLSTAR.html" target="_blank">レッチキメンバー</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/sjs/rc/Rcmember/bangai/bangai.html" target="_blank">番外編</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://overtures0929.hp.infoseek.co.jp/" target="_blank">overtures</A>
+
+
+
+
+
+
+
+<HR>
+
+<A HREF="http://village.infoweb.ne.jp/~rmaso/shins/" target="_blank">東京シンズ</A>
+
+
+
+<HR>
+
+<!- tool -!>
+
+
+
+<A NAME="tool"></A>
+
+<A HREF="http://hp.vector.co.jp/authors/VA022180/" target="_blank">小紅の塒(すごいたぶちさん)</A>
+
+
+
+<A HREF="http://hp.vector.co.jp/authors/VA018351/" target="_blank">ぴょんきち のページ(CLaunch)</A>
+
+
+
+<A HREF="http://curiosat.jpn.org/software" target="_blank">LED発車標</A>
+
+
+
+<BR>
+
+<A HREF="http://www.nakka.com" target="_blank">クリップボードの履歴を取るソフト(CLCL)</A>
+
+
+
+<A HREF="http://www.k3.dion.ne.jp/~kitt/pc/sw/index.html" target="_blank">Fire File Copy </A>
+
+
+
+<A HREF="http://popfile.sourceforge.net/" target="_blank">POPFile</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://www2s.biglobe.ne.jp/~sahmaro/ArtTips.html" target="_blank">ArtTips 概要 (ミニツール集)</A>
+
+
+
+
+
+<A HREF="http://simg.ld.infoseek.co.jp/" target="_blank">UnDup 重複ファイルを探す</A>
+
+
+
+<A HREF="http://www.steffengerlach.de/freeware/" target="_blank">Scanner 巨大フォルダを探す</A>
+
+
+
+<BR>
+
+<A HREF="http://www.vector.co.jp/soft/win95/hardware/se190988.html" target="_blank">メモリの掃除屋さん</A>
+
+
+
+<A HREF="http://www.ccleaner.com/" target="_blank">ごみファイル一掃＆レジストリ最適化</A>
+
+
+
+
+
+<A HREF="http://www1.u-netsurf.ne.jp/~jtdan/works/accel/" target="_blank">Win高速化 PC+</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://www.vector.co.jp/soft/winnt/util/se342838.html" target="aaa">デーモンバスター</A>
+
+
+
+<A HREF="http://pasokon-yugi.cool.ne.jp/~ko-ichi/" target="aaa">Customer</A>
+
+
+
+
+
+
+
+<!- DQ8 -!>
+
+<A NAME="DQ8"></A>
+
+<A HREF="http://gamekouryaku.com/dq8/kbbs/ibbs.cgi?H=tp&no=0" target="_blank">DQ8質問攻略</A>
+
+
+
+
+
+<A HREF="http://www.daiki.com/kouryaku2.htm" target="_blank">DQ8</A>
+
+
+
+<A HREF="http://gamekouryaku.com/dq8/index.html" target="_blank">ＤＱ８</A>
+
+
+
+
+
+<A HREF="http://dq8.d-navi.net/column.html#3" target="_blank">ＤＱ８</A>
+
+
+
+
+
+<BR>
+
+<HR>
+
+<!- BOOK -!>
+
+<A NAME="book"></A><A HREF="http://www.osakaya.co.jp/imode/" target="_blank">本の問屋</A>
+
+<A HREF="http://www.esbooks.co.jp/" target="_blank">esbooks</A>
+
+<A HREF="http://www2.ocn.ne.jp/~naruse/anagura/hunter/hunter.html" target="_blank">HUNTER×HUNTER</A>
+
+
+
+<HR>
+
+
+
+<A HREF="http://www.imura.co.jp/yaku/sasshi.htm" target="_blank">冊子小包郵便</A>
+
+
+
+
+
+<A HREF="http://www.post.japanpost.jp/service/parcel/you_pack/index.html" target="_blank">一般小包郵便</A>
+
+
+
+<A HREF="http://www.post.japanpost.jp/fee/simulator/kokunai/index.html" target="_blank">国内郵便料金表</A>
+
+
+
+<A HREF="http://www.post.japanpost.jp/fee/index.html" target="_blank">郵便</A>
+
+
+
+<HR>
+
+
+
+<!- CREDIT -!>
+
+
+
+<A NAME="credit"></A>
+
+<A HREF="http://www.saisoncard.co.jp/index.html" target="_blank">SAISON CARD</A>
+
+
+
+<A HREF="https://www.orix.co.jp/club/PLANET/login.html" target="_blank">ORIX CARD ログイン</A>
+
+
+
+
+
+<A HREF="http://www.orixclub.com" target="_blank">ORIX CARD</A>
+
+
+
+<A HREF="http://www.orix.co.jp/i/club" target="_blank">ORIX CARD(iモード)</A>
+
+
+
+<A HREF="http://myone.aozoracard.co.jp/index.html" target="_blank">マイワン</A>
+
+
+
+
+
+<A HREF="http://www.orico.co.jp/" target="_blank">オリコ</A>
+
+
+
+<A HREF="http://www.orico.co.jp/inquiry/center.html" target="_blank">オリコカードセンター</A>
+
+
+
+<HR>
+
+
+
+
+
+<A HREF="http://search.auctions.yahoo.co.jp/jp/search/auc?p=%A5%E2%A1%BC%A5%CB%A5%F3%A5%B0%CC%BC%A1%A3+%A4%C4%A4%F3%A4%AF&auccat=0&alocale=0jp&acc=jp" target="_blank">モーニング娘。 つんく</A>
+
+
+
+<BR>
+
+<A HREF="http://search.auctions.yahoo.co.jp/jp/search/auc?p=%A4%C1%A4%D0%A4%A2%A4%AD%A4%AA&auccat=0&alocale=0jp&acc=jp" target="_blank">ちばあきお</A>
+
+
+
+<A HREF="http://search.auctions.yahoo.co.jp/jp/search/auc?p=%BE%BE%B1%BA%B0%A1%CC%EF+DVD&auccat=0&alocale=0jp&acc=jp" target="_blank">松浦亜弥 DVD</A>
+
+
+
+
+
+<A HREF="http://search.auctions.yahoo.co.jp/jp/search/auc?p=CHAGE+ASKA+GUYS+%A5%D3%A5%C7%A5%AA&auccat=0&alocale=0jp&acc=jp" target="_blank">CHAGE ASKA GUYS ビデオ</A>
+
+
+
+<A HREF="http://search.auctions.yahoo.co.jp/jp/search/auc?p=%B8%E5%C6%A3%BF%BF%B4%F5+%A5%AF%A5%EA%A5%C3%A5%D7&auccat=0&alocale=0jp&acc=jp" target="_blank">後藤真希 クリップ</A>
+
+
+
+
+
+<BR>
+
+
+
+<HR>
+
+
+
+
+
+<!- MAKER -!>
+
+<A NAME="maker"></A>
+
+<A HREF="http://www.jp.sonystyle.com/Style-a/R505/main.html" target="_blank">SONY R505</A>
+
+
+
+<A HREF="http://www.sourcenext.com/support/qa/k/cgi-bin/tgt_form.cgi" target="_blank">ソースネクスト携快電話対応機種</A>
+
+
+
+
+
+<HR>
+
+<!- 通信 -!>
+
+<A NAME="net"></A>
+
+<A HREF="http://www.nttdocomo.co.jp/" target="_blank">Docomo</A>
+
+
+
+
+
+<A HREF="https://docomo-bill.ne.jp/Iguide/cgi-bin/IMenu" target="_blank">Docomo 料金案内</A>
+
+
+
+<A HREF="https://docomo.ebilling.ne.jp/cgi-bin/er70101" target="_blank">ｅビリング</A>
+
+
+
+<A HREF="http://www.docomo-ryokin.net/pc/index.html" target="_blank">Docomo料金見直し</A>
+
+
+
+
+
+<A HREF="http://www.willcom-inc.com/ja/index.html" target="_blank">WILLCOM</A>
+
+
+
+<A HREF="http://www.ddipocket.co.jp/qa/index.html" target="_blank">DDI Q & A</A>
+
+
+
+
+
+<A HREF="http://au-cs0.kddi.com/AuHome" target="_blank">Au</A>
+
+
+
+<A HREF="http://www.au.kddi.com" target="_blank">Au2</A>
+
+
+
+<A HREF="http://www.ntt-east.co.jp/atto/" target="_blank">NTT東日本＠ビリング</A>
+
+
+
+<A HREF="https://web-meisai.japan-telecom.co.jp/cgi-bin/meisai/usr/scripts/login.jsp" target="_blank">ODN WEB明細</A>
+
+
+
+
+
+<A HREF="http://www.odn.ne.jp/infoodn/kihon.html" target="_blank">ODN 基本設定</A>
+
+
+
+<A HREF="http://www.zdnet.co.jp/mobile/news/0108/09/cmail.html" target="_blank">cmail</A>
+
+
+
+
+
+<A HREF="https://www.mlpasswd.ido.ne.jp/index.html" target="_blank">C-mail着信変更</A>
+
+
+
+<HR>
+
+<!- MAP -!>
+
+<A NAME="map"></A>
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E135.34.15.8N34.47.85.4&ZM=11&NC=&CN=" target="_blank">大阪府茨木市</A>
+
+
+
+
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E135.30.39.3N34.39.67.9&ZM=11&NC=&CN=" target="_blank">大阪市中央区</A>
+
+
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E139.26.07.7N35.36.16.6&ZM=11&NC=&CN=" target="_blank">多摩市一本杉公園野球場</A>
+
+
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E139.26.35.2N35.36.48.6&ZM=11&NC=&CN=" target="_blank">多摩市貝取南公園野球場</A>
+
+
+
+
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E139.26.85.2N35.36.58.6&ZM=11&NC=&CN=" target="_blank">多摩市諏訪南公園野球場</A>
+
+
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E139.27.21.2N35.36.88.6&ZM=11&NC=&CN=" target="_blank">多摩市諏訪北公園野球場</A>
+
+
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E139.27.41.2N35.38.48.6&ZM=11&NC=&CN=" target="_blank">多摩市関戸公園野球場</A>
+
+
+
+
+
+<A HREF="http://www.mapfan.com/index.cgi?MAP=E139.28.34.2N35.36.88.6&ZM=11&NC=&CN=" target="_blank">稲城第３公園多目的広場</A>
+
+
+
+<BR>
+
+<HR>
+
+<!- ILL -!>
+
+<A NAME="ill"></A>
+
+
+
+<A HREF="http://www.illusion.jp/index2.html" target="_blank">イリュージョン</A>
+
+
+
+<A HREF="http://www.ayax-town.net/" target="_blank">ayaya</A>
+
+
+
+<A HREF="http://www.0999.co.jp/" target="_blank">サンキューコーポレーション</A>
+
+
+
+
+
+<A HREF="http://www.wristomo.com/purchase.html" target="_blank">リストモ</A>
+
+
+
+<A HREF="http://www.reudo.co.jp/rboardk/index.html" target="_blank">ＲＥＵＤＯ</A>
+
+
+
+
+
+<HR>
+
+<!- C言語 Oracle -!>
+
+
+
+<A NAME="COracle"></A>
+
+<A HREF="http://www.kumei.ne.jp/c_lang/index_c.html" target="_blank">Ｃ言語編</A>
+
+
+
+<A HREF="http://www.infoseek.co.jp/Topic/13/176/1342" target="_blank">Cその他</A>
+
+
+
+
+
+<A HREF="http://otn.oracle.co.jp/" target="_blank">Oracle</A>
+
+
+
+<A HREF="http://bungee.j.dendai.ac.jp/prog2/tech/bc/" target="_blank">Borland C++ Compiler 5.5のインストール解説</A>
+
+
+
+
+
+<HR>
+
+<A HREF="http://www.mytrip.net/ry_kakunin_itiran.html" target="_blank">楽天確認</A>
+
+
+
+
+
+<A HREF="http://www.cataloghouse.co.jp/index.html" target="_blank">カタログハウス</A>
+
+
+
+
+
+
+
+
+
+<HR>
+
+
+
+<A HREF="http://www.ultra-1.com/" target="_blank">ウルトラ１</A>
+
+
+
+
+
+<A HREF="http://www.mag2.com/" target="_blank">まぐまぐ</A>
+
+
+
+<A HREF="http://www3.plala.or.jp/R-12/profile.html" target="_blank">新メンバー</A>
+
+<BR>
+
+<A HREF="https://www.highwaybus.com/" target="_blank">京王高速バス</A>
+
+<BR>
+
+
+
+<A HREF="http://member.nifty.ne.jp/oso/speedtest/" target="_blank">計測</A>
+
+<BR>
+
+<A HREF="http://www.sjk.co.jp/index_j.html" target="_blank">通勤メール</A>
+
+<BR>
+
+
+
+<A HREF="http://www.ch5.com/life/rakugaki.cgi" target="_blank">ライフＢＢＳ－ＯＬＤ</A>
+
+<BR>
+
+<A HREF="http://www.ch5.com/cgi-bin/li-rakugaki.pl" target="_blank">ライフＢＢＳ－ＯＬＤ２</A>
+
+<BR>
+
+<A HREF="http://www.oricon.co.jp/ranking/hitmap.html" target="_blank">ＯＲＩＣＯＮ ＨＩＴ ＭＡＰ ＯＬＤ</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/lists/A-26.html" target="_blank">AE-26 J-POP（USEN440 Hits）</A>
+
+
+
+<BR>
+
+<A HREF="http://www.usen440.com/lists/A-30.html" target="_blank">AE-30 J-POP（NEW DISC）</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/lists/B-07.html" target="_blank">BF-07 アーティストセレクション　MONTHLY</A>
+
+
+
+<BR>
+
+<A HREF="http://www.usen440.com/lists/B-08.html" target="_blank">BF-08 アーティストセレクション　WEEKLY</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/html/AE.html" target="_blank">有線ＡＥ</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/html/BF.html" target="_blank">有線ＢＦ</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/weekly_list/A-26.html" target="_blank">AE-26 J-POP（USEN440 Hits）</A>
+
+
+
+<BR>
+
+<A HREF="http://www.usen440.com/weekly_list/A-30.html" target="_blank">AE-30 J-POP（NEW DISC）</A>
+
+<BR>
+
+
+
+<A HREF="http://www.usen440.com/monthly_list/B-07.html" target="_blank">BF-07 アーティストセレクション　MONTHLY</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/weekly_list/B-08.html" target="_blank">BF-08 アーティストセレクション　WEEKLY</A>
+
+<BR>
+
+<A HREF="http://www.yodobashi.co.jp/" target="_blank">ヨドバシ</A>
+
+<BR>
+
+<A HREF="http://www.oricon.co.jp/ranking/cd_single.asp?c=1&sc=1&term=1" target="_blank">ＯＲＩＣＯＮシングルold</A>
+
+<BR>
+
+<A HREF="http://www.oricon.co.jp/ranking/cd_album.asp?c=1&sc=2&term=1" target="_blank">ＯＲＩＣＯＮアルバムold</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://wam.ascii.co.jp/org/352/" target="_blank">HP 作成</A>
+
+<A HREF="http://www.st.rim.or.jp/~makoto3/weblab/js_man/js_man001.html" target="_blank">Java 作成</A>
+
+
+
+<HR>
+
+<A HREF="http://gogo-tea.jp/cgi-bin/F01_top_disp.cgi" target="_blank">午後の紅茶</A>
+
+
+
+<A HREF="http://www.cd-release.com/news/index.html" target="_blank">CD release</A>
+
+
+
+<HR>
+
+<A HREF="http://search.auctions.yahoo.co.jp/jp/search/auc?p=akina+%A4%A6%A4%C1%A4%EF&auccat=0&alocale=0jp&acc=jp" target="_blank">AKINA うちわの検索結果</A>
+
+
+
+
+
+
+
+<BR>
+
+<A HREF="http://search.auctions.yahoo.co.jp/jp/search/auc?p=%B2%F5%A4%EC%A4%CA%A4%A4%B0%A6%A4%AC%CD%DF%A4%B7%A4%A4%A4%CE&auccat=0&alocale=0jp&acc=jp" target="_blank">壊れない愛が欲しいの検索結果</A>
+
+
+
+<BR>
+
+<HR>
+
+<A HREF="http://page.auctions.yahoo.co.jp/jp/auction/57635970" target="_blank">壊れない愛が欲しいの/GET UP!/BE ALL RIGHT! 新同品</A>
+
+
+
+<BR>
+
+<A HREF="http://page4.auctions.yahoo.co.jp/jp/auction/d33670526" target="_blank">浜崎あゆみ Junior Vasque</A>
+
+
+
+<BR>
+
+<A HREF="http://page5.auctions.yahoo.co.jp/jp/auction/e27011967" target="_blank">トルネコの大冒険３ Ａ４サイズ クリアファイル</A>
+
+
+
+
+
+<BR>
+
+<A HREF="http://page4.auctions.yahoo.co.jp/jp/auction/d35672465" target="_blank">セブンイレブン 限定 ポケモンカード ７枚 すべて未開封</A>
+
+
+
+<BR>
+
+<A HREF="http://page.auctions.yahoo.co.jp/jp/auction/57596187" target="_blank">AKINA( Folder5 フォルダー５ ) うちわ 非売品</A>
+
+
+
+<BR>
+
+<A HREF="http://www.geoland.jp" target="_blank">DVD/CD レンタル</A>
+
+
+
+<BR>
+
+<A HREF="http://partner.kuronekoyamato.co.jp/estimate/tak_est.html" target="_blank">クロネコヤマト料金</A>
+
+
+
+
+
+
+
+<BR>
+
+<A HREF="http://www3.to/ayayahworld/" target="_blank">AYA YAH WORLD</A>
+
+
+
+<BR>
+
+<A HREF="http://www.nikkansports.com/osaka/index.html" target="_blank">なにわＷＥＢold</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://www.k29.net/" target="_blank">K29old</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://allabout.co.jp/finance/401k/closeup/CU20030629/index3.htm" target="_blank">代行返上</A>
+
+
+
+
+
+<BR>
+
+
+
+<HR>
+
+
+
+<A HREF="http://www.oricon.co.jp" target="_blank">ＯＲＩＣＯＮホームページ</A>
+
+<A HREF="http://www.oricon.co.jp/ranking/index.html" target="_blank">ＯＲＩＣＯＮランキング</A>
+
+<BR>
+
+<A HREF="http://www2.oricon.co.jp/ranking/weekly_single.html" target="_blank">ＯＲＩＣＯＮシングル</A>
+
+
+
+<A HREF="http://www2.oricon.co.jp/ranking/weekly_album.html" target="_blank">ＯＲＩＣＯＮアルバム</A>
+
+
+
+
+
+<A HREF="http://www.oricon.co.jp/ranking/hitmap_single.html" target="_blank">オリコンシングルＨｉｔＭａｐ</A>
+
+
+
+
+
+<A HREF="http://www.oricon.co.jp/ranking/hitmap_album.html" target="_blank">オリコンアルバムＨｉｔＭａｐ</A>
+
+<BR>
+
+<A HREF="http://www.oricon.co.jp/search/index.asp" target="_blank">ＯＲＩＣＯＮ ＳＥＡＲＣＨ</A>
+
+
+
+
+
+<HR>
+
+<A HREF="http://www.ddipocket.co.jp/index.html" target="_blank">DDI</A>
+
+<A HREF="http://www.illusion.jp/IndexFS.html" target="_blank">イリュージョン</A>
+
+
+
+
+
+<HR>
+
+
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=0&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 0 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=1&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 1 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=2&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 2 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=3&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 3 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=4&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 4 時</A>
+
+<BR>
+
+
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=5&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 5 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=6&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 6 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=7&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 7 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=8&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 8 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=9&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 9 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=10&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 10 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=11&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 11 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=12&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 12 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=13&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 13 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=14&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 14 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=15&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 15 時</A>
+
+<BR>
+
+
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=16&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 16 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=17&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 17 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=18&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 18 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=19&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 19 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=20&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 20 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=21&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 21 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=22&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 22 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=1&day=&hour=23&minute=0&max=12&label=on&num=on" target="_blank">BF-01 JPOP 23 時</A>
+
+<BR>
+
+<HR>
+
+
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=0&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 0 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=1&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 1 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=2&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 2 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=3&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 3 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=4&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 4 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=5&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 5 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=6&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 6 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=7&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 7 時</A>
+
+<BR>
+
+
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=8&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 8 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=9&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 9 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=10&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 10 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=11&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 11 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=12&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 12 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=13&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 13 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=14&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 14 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=15&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 15 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=16&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 16 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=17&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 17 時</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=18&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 18 時</A>
+
+<BR>
+
+
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=19&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 19 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=20&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 20 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=21&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 21 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=22&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 22 時</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=23&minute=0&max=12&label=on&num=on" target="_blank">BF-13 JPOP 23 時</A>
+
+
+
+<BR>
+
+
+
+<HR>
+
+<A HREF="http://www.usen.ne.jp/usen440/" target="_blank">有線ホームページ</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/songlist.cgi?ch=A26" target="_blank">AE-26 J-POP（USEN440 Hits）</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/songlist.cgi?ch=A30" target="_blank">AE-30 J-POP（NEW DISC）</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/songlist.html" target="_blank">有線SONG LIST</A>
+
+<BR>
+
+<A HREF="http://onair.usen.co.jp/cgi-bin/songlist.cgi?ch=A30" target="_blank">AE-30 J-POP（NEW DISC）</A>
+
+
+
+<BR>
+
+
+
+<A HREF="http://www.usen440.com/simple/BF.html" target="_blank">有線ＢＦ</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/songlist.cgi?ch=B07" target="_blank">BF-07 アーティストセレクション　MONTHLY</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/songlist.cgi?ch=B08" target="_blank">BF-08 アーティストセレクション　WEEKLY</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/songlist.cgi?ch=B13" target="_blank">BF-13 90'S Hits</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=&minute=&max=12" target="_blank">BF-13 90'S Hits(Check用)</A>
+
+<BR>
+
+<A HREF="http://www.usen440.com/info.html" target="_blank">有線リクエスト</A>
+
+
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=&minute=&max=12" target="_blank">BF-13 90'S Hits Now i</A>
+
+<BR>
+
+<A HREF="http://onair.usen.ne.jp/cgi-bin/onair.cgi?option=&band=B&channel=13&day=&hour=&minute=&max=12&label=on&num=on" target="_blank">BF-13 90'S Hits</A>
+
+<BR>
+
+<A HREF="http://www.willcom-inc.com/top/index.html" target="_blank">DDI</A>
+
+<BR>
+
+<A HREF="http://cl.nikkeibp.co.jp/cl/link.html" target="_blank">日経クリックフリーソフト</A>
+
+
+
+<BR>
+
+<A HREF="http://morningmusume.dream.com/" target="_blank">モーニング娘。 Hello</A>
+
+
+
+
+
+
+
+<BR>
+
+<A HREF="http://www.holonsoft.co.jp/products/davideo/" target="_blank">DaViDeo2 Plus! with DivX Pro</A>
+
+
+
+<BR>
+
+<A HREF="http://www.sponichi.co.jp/usa/mlb/japanese/nomo/" target="_blank">野茂</A>
+
+
+
+<BR>
+
+<A HREF="http://www.casio.co.jp/EZ-USB/product/cd-r/media/" target="_blank">CASIO</A>
+
+
+
+<BR>
+
+<A HREF="http://www.osakaya.co.jp/imode/comic/comic4.asp?ISBN=4063347370&month=6&NAME=シュート！Ｔｈｅ　Ｆｉｎａｌ　Ｉｎｄｅｘ" target="_blank">シュート！Ｔｈｅ　Ｆｉｎａｌ　Ｉｎｄｅｘ</A>
+
+
+
+
+
+<BR>
+
+
+
+<A HREF="http://www.osakaya.co.jp/imode/comic/comic4.asp?ISBN=4063632466&month=6&NAME=はじめの一歩（65）" target="_blank">はじめの一歩（65）</A>
+
+
+
+<BR>
+
+<A HREF="http://www.osakaya.co.jp/imode/comic/comic4.asp?ISBN=4063632563&month=6&NAME=シュート！～新たなる伝説～（16）（完）" target="_blank">シュート！～新たなる伝説～（16）（完）</A>
+
+
+
+<BR>
+
+<A HREF="https://netanswer.saisoncard.co.jp/Frm110000.html" target="_blank">SAISON CARD</A>
+
+
+
+<BR>
+
+<A HREF="http://www.nttdocomo.co.jp/index.shtml" target="_blank">Docomo</A>
+
+
+
+
+
+<BR>
+
+
+
+<A HREF="http://osaka.nikkansports.com/" target="_blank">なにわＷＥＢ</A>
+
+<BR>
+
+
+
+<A HREF="http://www.oricondd.com/ranking/weekly_single.php" target="_blank">ＯＲＩＣＯＮシングル</A>
+
+
+
+<A HREF="http://www.oricondd.com/ranking/weekly_album.php" target="_blank">ＯＲＩＣＯＮアルバム</A>
+
+
+
+<BR>
+
+
+
+<HR>
+
+<!- ----------------------------------------------- -!>
+
+<!- あまり使わなくなったリンクを移動 2011.07.12 -!>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://mixi.jp/edit_account_notice_mail.pl" target="_blank">[mixi] その他設定</A>
+
+
+
+<HR>
+
+<!- ----------------------------------------------- -!>
+
+<!- あまり使わなくなったリンクを移動 2009.01.12 -!>
+
+
+
+<A HREF="http://www.nikkansports.com/baseball/professional/team/ti-team.html" target="_blank">なにわＷＥＢ</A>
+
+
+
+<HR>
+
+<A HREF="http://ascii-business.com/" target="_blank">アスキービジネス</A>
+
+
+
+<A HREF="http://www.tagindex.com/tool/url.html" target="_blank">URLエンコード・デコードフォーム</A>
+
+
+
+<A HREF="http://members.ld.infoseek.co.jp/hp_yamakatsu/dvd2mpgflow.html" target="_blank">DVDビデオからMPEG-2へ，MPEG-2からDVDビデオへ</A>
+
+
+
+<A HREF="http://www.google.co.jp/search?hl=ja&q=DVD+MPEG&btnG=Google+%E6%A4%9C%E7%B4%A2&lr=" target="_blank">DVD MPEG - Google 検索</A>
+
+
+
+
+
+<A HREF="http://www.google.co.jp/search?hl=ja&q=TMPGEnc+%E3%83%95%E3%83%AA%E3%83%BC&btnG=Google+%E6%A4%9C%E7%B4%A2&lr=" target="_blank">TMPGEnc フリー - Google 検索</A>
+
+
+
+<A HREF="http://www.othello.org/lesson/lesson/" target="_blank">初心者のためのオセロ講座</A>
+
+
+
+
+
+<A HREF="http://blog.so-net.ne.jp/atsuya-furuta/" target="_blank">古田敦也 blog</A>
+
+
+
+<A HREF="http://www.nikkansports.com/baseball/professional/team/ti-team.html" target="_blank">なにわＷＥＢ</A>
+
+
+
+<A HREF="http://www.sponichi.co.jp/baseball/" target="_blank">スポニチ</A>
+
+
+
+<A HREF="http://daily.jp/" target="_blank">デイリー</A>
+
+
+
+
+
+<A HREF="http://www.d-bb.com/cgi-bin/dbb_top_page.cgi" target="_blank">ドリームベースボール</A>
+
+
+
+<A HREF="http://www.nikkansports.com/osaka/otr/03ren/vs.html" target="_blank">Ｖ最終章</A>
+
+
+
+
+
+<A HREF="http://www.nikkansports.com/ns/baseball/professional/result/pf-result.html" target="_blank">日刊対戦成績</A>
+
+
+
+<A HREF="http://www.city.tama.tokyo.jp/manabi/calspo/yoyaku_sys.htm" target="_blank">多摩市施設予約(旧)</A>
+
+
+
+<A HREF="http://www.asahi-net.or.jp/~nt8m-okd/menu.html" target="_blank">HOMEPAGE(ASAHI)</A>
+
+
+
+
+
+<A HREF="https://bb2.fujibank.co.jp/servlet/fbb?xtr=Emf00000&NLS=JP" target="_blank">富士銀行</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://mixi.jp/edit_account.pl?detail" target="mixi">[mixi] その他設定</A>
+
+
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://tooljp.com/notes/whatgw.html" target="_blank">test</A>
+
+
+
+
+
+<HR>
+
+
+
+<A NAME="picture"></A>
+
+<H2>画像リンク</H2>
+
+
+
+<A HREF="f01.html" target="_blank">f01</A>
+
+<BR>
+
+<A HREF="f02.html" target="_blank">f02</A>
+
+<BR>
+
+<A HREF="f03.html" target="_blank">f03</A>
+
+
+
+<BR>
+
+<A HREF="f04.html" target="_blank">f04</A>
+
+<BR>
+
+<HR>
+
+<HR>
+
+<H4>
+
+
+
+<H2>2012/02/06 移動</H2>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://mixi.jp/run_appli.pl?id=9513" target="_blank">まちつく</A>
+
+
+
+<BR><BR>
+
+<A HREF="http://www.mcdonalds.co.jp/sales/new/smileplus/index.php" target="_blank">マクドナルドクーポン</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://chouseisan.com/schedule/List?h=aa5abf5985b36d361c223383c78ee126" target="_blank">レッチキスケジュール2010/01/26</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.city.tama.lg.jp/seikatsu/13/1043/013160.html" target="_blank">ごみ・資源収集カレンダー(平成23年度)（2011年度）｜多摩市</A>
+
+
+
+
+
+
+
+<H2>2012/12/27 移動</H2>
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 2012/12/27 あまり使われていないものを移動１ -!>
+
+<!- ----------------------------------------------- -!>
+
+
+
+<BR>
+
+<BR>
+
+<A HREF="#Mobile">モバイル端末</A>
+
+<BR>
+
+<BR>
+
+<A HREF="#Web">ウェブ端末</A>
+
+<BR>
+
+<BR>
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 2012/12/27 あまり使われていないものを移動２ -!>
+
+<!- ----------------------------------------------- -!>
+
+
+
+<A HREF="#Top">トップへ</A>
+
+<BR><BR><BR><BR>
+
+<A HREF="#Web">ウェブ端末へ</A>
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 2012/12/27 あまり使われていないものを移動３ -!>
+
+<!- ----------------------------------------------- -!>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://mixi.jp/run_appli.pl?id=7157#" target="_blank">サンシャイン牧場</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://twilog.org/okadakantoku/stats/" target="_blank">twilog stats</A>
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.sponichi.co.jp/baseball/special/calender/index.html" target="_blank">スポニチ（日めくり）</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://daily.jp/tigers/" target="_blank">デイリー（タイガース）</A>
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.evernote.com/about/intl/jp/" target="_blank">Evernote</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://spreadsheets.google.com/ccc?key=0ArnC7DJMs0LMdFo1enluOTZLbFpPN05mbWdaZGk1Q0E&hl=ja" target="_blank">2009/10/15～</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.movatwi.jp/" target="_blank">モバツイ</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://movapic.com/" target="_blank">携帯百景</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://booklog.jp/home" target="_blank">ブクログ</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.safesync.jp/!#/LMFQmjxf/" target="_blank">SafeSync</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://id.dwmail.jp/id/authn/LoginStart?Site=dwmail.jp&Success=http://www.dwmail.jp/" target="_blank">| [ドコモwebメール] | NTTドコモ </A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://ndrive.naver.jp/" target="_blank">NAVER Nドライブ</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.city.tama.lg.jp/seikatsu/13/1043/004871.html" target="_blank">ごみ・資源の分別ガイド｜多摩市</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.city.tama.lg.jp/seikatsu/13/1043/015186.html" target="_blank">ごみ・資源収集カレンダー(平成24年度)（2012年度）｜多摩市</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://gmail.1o4.jp/operators.html" target="_blank">Gmailの検索演算子一覧（隠れコマンド含む）。高度なフィルタ作成に！</A>
+
+
+
+
+
+<H2>2013/05/02 移動</H2>
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 2013/05/02 移動４ -!>
+
+<!- 接続先変更のため -!>
+
+<!- ----------------------------------------------- -!>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.japannetbank.co.jp/login.html" target="_blank">Japan Net Bank ログイン</A>
+
+
+
+
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 2013/05/07 移動５ -!>
+
+<!- 接続先変更のため -!>
+
+<!- ----------------------------------------------- -!>
+
+<BR><BR><BR><BR>
+
+<A HREF="https://cs.kddi.com/" target="_blank">My au</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://support.nifty.com/support/member/mobile/wimax.htm" target="_blank">会員サポート > @nifty WiMAXのお手続き : @nifty</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.mydocomo.com/web/home/" target="_blank">My docomo</A>
+
+
+
+
+
+<HR>
+
+<H2>2014/10/09 移動</H2>
+
+<!- ----------------------------------------------- -!>
+
+<!- 2014/10/09 移動6 -!>
+
+<!- 接続先変更のため -!>
+
+<!- ----------------------------------------------- -!>
+
+<BR><BR><BR><BR>
+
+<A HREF="https://store.willcom-inc.com/ec/faces/member/index.jsp" target="_blank">My Willcom</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://webmy.emobile.jp/web/" target="_blank">My イーモバイル(新メール)</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://webmy.emobile.jp/web/login/toLogin" target="_blank">My イーモバイル(旧ID)</A>
+
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.bmobile.ne.jp/support/login.html" target="_blank">My b-mobile</A>
+
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 2019/06/22 移動7 -!>
+
+<!- 見直しのため -!>
+
+<!- ----------------------------------------------- -!>
+<BR><BR><BR><BR>
+
+<A HREF="https://secure.logmein.com/home.asp" target="_blank">LogMeIn</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.evernote.com/Home.action" target="_blank">Evernote(直)</A>
+
+
+<BR><BR><BR><BR>
+
+<A HREF="http://www.jinjitter.jp/user/" target="_blank">人事ったー</A>
+
+<BR><BR><BR><BR>
+
+<A HREF="https://www.mydocomo.com/dcm/dfw?MDCM_AK=https%3a%2f%2fwww.mydocomo.com%2fdcm%2fdfw%2fag&path=%2fdcm%2fdfw%2fweb%2fportal%2fpub2%2fMYDPS-TR0001.do&query=link_url%3dhttps%253A%252F%252Fwww.mydocomo.com%252Fdcm%252Fdfw%252Fweb%252Fpub2%252Fr%252Fsys%252Ficewall%252Fauthlogin_top.html" target="_blank">My docomo</A>
+
+
+<!- ----------------------------------------------- -!>
+
+<!- 2025/04/27 移動8 -!>
+
+<!- 見直しのため -!>
+
+<!- ----------------------------------------------- -!>
+<A HREF="
+http://osunekotaro.o.oo7.jp/link3.html
+" target="_blank">
+link3
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+http://osunekotaro.o.oo7.jp/link4.html
+" target="_blank">
+link4
+</A>
+
+<BR>
+<BR>
+
+<A HREF="
+https://alsok.ingelc.com/tecs/
+" target="_blank">
+eラーニング
+</A>
+
+<BR>
+<BR>
+
+
+<!- ----------------------------------------------- -!>
+
+
+
+
+
+
+
+
+
+<BR>
+
+<BR>
+
+<BR>
+
+<SCRIPT>
+
+writeModified()
+
+
+
+</SCRIPT>
+
+
+
+</H4>
+
+
+
+
+
+</BODY>
