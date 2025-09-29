@@ -63,5 +63,10 @@ javascript:%28%20function%28%29%20%7B%20var%20copybuf%20%3D%20%27%E6%8A%80%E6%95
     </a>
   </p>
 
+  <p>
+<a href='javascript:(async () =&gt; { try {  const text = await navigator.clipboard.readText();  const cleaned = text.trim();  const trimmed = cleaned.startsWith(`"`) &amp;&amp; cleaned.endsWith(`"`)   ? cleaned.slice(1, -1)   : cleaned;  await navigator.clipboard.writeText(trimmed);  alert("ダブルクォーテーションを除去して再コピーしました:\n\n" + trimmed); } catch (e) {  alert("クリップボードの操作に失敗しました。\nブラウザの設定やHTTPS環境を確認してください。"); }})();'>クォート除去コピー</a>
+  </p>
+
+
 </body>
 </html>
