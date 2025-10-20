@@ -1,0 +1,1 @@
+javascript:(()=>{const d=new Date();d.setDate(d.getDate()+180);alert(`${d.getFullYear()}/${('0'+(d.getMonth()+1)).slice(-2)}/${('0'+d.getDate()).slice(-2)}(${['日','月','火','水','木','金','土'][d.getDay()]})`);})();
