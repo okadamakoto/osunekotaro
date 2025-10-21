@@ -1,0 +1,2 @@
+javascript:(function(){navigator.clipboard.readText().then(function(text){const singleLine = text.replace(/\s+/g, ' ').trim();     navigator.clipboard.writeText(singleLine).then(function(){       alert("改行を除去して1行にしたテキストをクリップボードに再コピーしました:\n\n" + singleLine);     }, function(err){       alert("クリップボードへの書き込みに失敗しました: " + err);     });   }, function(err){     alert("クリップボードの読み取りに失敗しました: " + err);   }); })();
+
