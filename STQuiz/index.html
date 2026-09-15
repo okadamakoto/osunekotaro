@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ITストラテジスト 午前Ⅱ 学習サイト</title>
+
+    <link rel="stylesheet" href="css/style.css" >
+
+</head>
+
+<body>
+
+    <header>
+        <h1>ITストラテジスト試験 午前Ⅱ 学習サイト</h1>
+
+        <div id="examInfo">
+            2025年 午前Ⅱ
+        </div>
+    </header>
+
+    <main>
+
+        <!-- 問題番号 -->
+        <section class="question-header">
+            <h2 id="questionNo">問1</h2>
+        </section>
+
+        <!-- 問題文 -->
+        <section class="question-area">
+
+            <div id="questionText">
+                問題を読み込み中...
+            </div>
+
+            <!-- 図表 -->
+            <div class="image-area">
+            </div>
+
+        </section>
+
+        <!-- 選択肢 -->
+        <section class="choice-area">
+
+            <form id="answerForm">
+
+                <label class="choice">
+                    <input type="radio" name="answer" value="ア">
+                    <span id="choiceA"></span>
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="answer" value="イ">
+                    <span id="choiceI"></span>
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="answer" value="ウ">
+                    <span id="choiceU"></span>
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="answer" value="エ">
+                    <span id="choiceE"></span>
+                </label>
+
+            </form>
+
+        </section>
+
+        <!-- ボタン -->
+        <section class="button-area">
+
+            <button id="answerBtn">
+                回答する
+            </button>
+
+            <button id="nextBtn" style="display:none;">
+                次の問題
+            </button>
+
+        </section>
+
+        <!-- 結果 -->
+        <section id="resultArea" style="display:none;">
+
+            <h3>結果</h3>
+
+            <div id="judge"></div>
+
+            <p>
+                <strong>正解：</strong>
+                <span id="correctAnswer"></span>
+            </p>
+
+            <p>
+                <strong>解説：</strong>
+            </p>
+
+            <div id="explanation"></div>
+
+            <div id="wrongChoices"></div>
+
+            <hr>
+
+            <p>
+                <strong>カテゴリ：</strong>
+                <span id="category"></span>
+            </p>
+
+            <p>
+                <strong>キーワード：</strong>
+                <span id="keywords"></span>
+            </p>
+
+            <p>
+                <strong>シラバス：</strong>
+                <span id="syllabus"></span>
+            </p>
+
+            <p>
+                <strong>暗記ポイント：</strong>
+                <span id="memorize"></span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <div id="scoreArea">
+            正解数：0
+        </div>
+
+    </footer>
+
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

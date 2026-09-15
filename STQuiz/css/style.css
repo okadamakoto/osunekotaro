@@ -1,0 +1,293 @@
+﻿/* ========================================
+   共通設定
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.8;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+#examInfo {
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   メインエリア
+======================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   問題番号
+======================================== */
+
+.question-header {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+#questionNo {
+    color: #003366;
+}
+
+/* ========================================
+   問題文
+======================================== */
+
+.question-area {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#questionText {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   図表・画像
+======================================== */
+
+.image-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-area img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+/* ========================================
+   選択肢
+======================================== */
+
+.choice-area {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.choice {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.choice:hover {
+    background-color: #eef5ff;
+}
+
+.choice input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* ========================================
+   ボタン
+======================================== */
+
+.button-area {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #004c99;
+}
+
+button:disabled {
+    background-color: #999999;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   結果表示
+======================================== */
+
+#resultArea {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#judge {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 正解 */
+.correct {
+    color: #0066cc;
+}
+
+/* 不正解 */
+.incorrect {
+    color: #cc0000;
+}
+
+#correctAnswer,
+#category,
+#keywords,
+#syllabus,
+#memorize {
+    font-weight: bold;
+}
+
+#explanation {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 2;
+}
+
+/* ========================================
+   暗記ポイント
+======================================== */
+
+#memorize {
+    color: #006600;
+}
+
+/* ========================================
+   フッター
+======================================== */
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#scoreArea {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ========================================
+   解説テーブル
+======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+
+table th {
+    background-color: #e6eef8;
+}
+
+/* ========================================
+   キーワード表示
+======================================== */
+
+.keyword-tag {
+    display: inline-block;
+    background-color: #e6eef8;
+    color: #003366;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   シラバス表示
+======================================== */
+
+.syllabus-tag {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   スマホ対応
+======================================== */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    #questionText {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .choice {
+        font-size: 0.95rem;
+    }
+}
