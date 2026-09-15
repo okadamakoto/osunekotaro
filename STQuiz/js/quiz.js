@@ -123,22 +123,22 @@ function setChoices(question) {
     document.getElementById(
         "choiceA"
     ).textContent =
-        question.choices["ア"];
+        "ア　" + question.choices["ア"];
 
     document.getElementById(
         "choiceI"
     ).textContent =
-        question.choices["イ"];
+        "イ　" + question.choices["イ"];
 
     document.getElementById(
         "choiceU"
     ).textContent =
-        question.choices["ウ"];
+        "ウ　" + question.choices["ウ"];
 
     document.getElementById(
         "choiceE"
     ).textContent =
-        question.choices["エ"];
+        "エ　" + question.choices["エ"];
 }
 
 /*
