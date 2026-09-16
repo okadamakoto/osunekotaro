@@ -76,6 +76,8 @@ function showQuestion() {
 
     displayQuestionImage(question);
 
+    displaySource(question);
+    
     setChoices(question);
 
     clearSelectedAnswer();
@@ -293,4 +295,23 @@ function disableNextButton() {
         "nextBtn"
     ).style.display =
         "none";
+}
+
+function displaySource(question) {
+
+    const sourceArea =
+        document.getElementById(
+            "sourceArea"
+        );
+
+    let html =
+        `出典：${question.source}`;
+
+    if (question.modified) {
+
+        html +=
+            "<br>※本サイトでは学習目的のため一部表現を改変しています。";
+    }
+
+    sourceArea.innerHTML = html;
 }
