@@ -47,7 +47,19 @@ JSON読込み
 
 async function loadQuizData() {
 
-    const response = await fetch("data/ST2025_AM2.json");
+    const selectedExam =
+        localStorage.getItem(
+            "selectedExam"
+        );
+
+    const fileName =
+        selectedExam ??
+        "ST2025_AM2";
+
+    const response =
+        await fetch(
+            `data/${fileName}.json`
+        );
 
     if (!response.ok) {
         throw new Error(
@@ -55,10 +67,9 @@ async function loadQuizData() {
         );
     }
 
-    quizData = await response.json();
+    quizData =
+        await response.json();
 
-    console.log(
-        "問題データ読込完了",
-        quizData
-    );
 }
+
+
