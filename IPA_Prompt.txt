@@ -22,6 +22,7 @@ JSON以外の文章は出力しないこと。
 
 良い例
 
+```json
 ,
 {
   "id": "ST-2024-AM2-Q2",
@@ -54,23 +55,38 @@ JSON以外の文章は出力しないこと。
   },
   "memorize": "..."
 }
+```
 
 【JSON項目順】
 
 id
+
 source
+
 modified
+
 no
+
 category
+
 keywords
+
 syllabus
+
 question
+
 image
+
 choices
+
 answer
+
 answerText
+
 explanation
+
 wrongChoices
+
 memorize
 
 【出力ルール】
@@ -84,52 +100,170 @@ memorize
 【作成ルール】
 
 id形式：
+
 ST-2024-AM2-Q4
 
 source形式：
+
 2024年度 ITストラテジスト試験 午前Ⅱ 問4
 
 keywords：
+
 5～6個
 
 syllabus：
+
 1～2件
 
-image：
-図表なしなら ""
-
 choices：
+
 ア、イ、ウ、エ順
 
 answer：
+
 正解記号のみ
 
 answerText：
+
 正解選択肢全文
 
 explanation：
+
 100～250文字
 
 wrongChoices：
+
 誤答のみ記載
 
 memorize：
+
 20～60文字
 
-回答の最初の3行は必ず次の形式で始めること。
- 
+【imageルール】
+
+画像がない問題
+
+```json
+"image": ""
+```
+
+画像がある問題
+
+```json
+"image": "images/ST2021_AM2/Q06.png"
+```
+
+形式で出力すること。
+
+ルール
+
+・フォルダ名は必ず
+
+```text
+STyyyy_AM2
+```
+
+形式とする。
+
+・yyyyは試験年度を設定する。
+
+例
+
+```text
+2021年度 → ST2021_AM2
+2024年度 → ST2024_AM2
+```
+
+・ファイル名は必ず
+
+```text
+Qnn.png
+```
+
+形式とする。
+
+・問題番号は必ず2桁ゼロ埋めとする。
+
+例
+
+```text
+問1  → Q01.png
+問2  → Q02.png
+問9  → Q09.png
+問10 → Q10.png
+問21 → Q21.png
+```
+
+例
+
+```json
+"image": "images/ST2021_AM2/Q01.png"
+```
+
+```json
+"image": "images/ST2021_AM2/Q06.png"
+```
+
+```json
+"image": "images/ST2024_AM2/Q21.png"
+```
+
+以下の形式で出力することを禁止する。
+
+```json
+"image": "2019-ST-AM2-Q21.png"
+```
+
+```json
+"image": "ST2021-Q06.png"
+```
+
+```json
+"image": "Q06.png"
+```
+
+必ず
+
+```json
+"image": "images/ST2021_AM2/Q06.png"
+```
+
+形式で出力すること。
+
+【回答開始ルール】
+
+回答の最初の3行は必ず次の形式で開始すること。
+
+```json
 ,
 {
-"id":
- 
-上記以外の形式で開始することは禁止する。
+  "id":
+```
 
-出力前に次を確認すること。
+上記以外の形式で開始することを禁止する。
+
+【出力前チェック】
+
+必ず確認すること。
 
 ・JSON構文エラーなし
+
 ・改行あり
+
 ・インデントあり
+
 ・1行JSONではない
+
 ・answerとanswerTextが一致
-・choicesはア～エ順
+
+・choicesはア→イ→ウ→エ順
+
+・wrongChoicesは誤答のみ
+
 ・指定順で出力
+
+・imageは指定形式に一致
+
+・問題番号は2桁ゼロ埋め
+
+・JSON以外の文章を出力しない
