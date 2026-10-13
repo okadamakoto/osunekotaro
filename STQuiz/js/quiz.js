@@ -251,6 +251,17 @@ function finishQuiz() {
                 )}
                 %
             </p>
+
+            <button
+                onclick="location.href='start.html'"
+                style="
+                    margin-top:20px;
+                    padding:10px 20px;
+                    cursor:pointer;
+                ">
+                他の年度を選択する
+            </button>
+
         </section>
     `;
 }
