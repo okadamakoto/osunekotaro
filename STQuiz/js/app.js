@@ -24,6 +24,16 @@ async function initialize() {
 
     try {
 
+        const selectedExam =
+            localStorage.getItem(
+                "selectedExam"
+            ) ?? "ST2025_AM2";
+
+        document.getElementById(
+            "examInfo"
+        ).textContent =
+            selectedExam;
+
         await loadQuizData();
 
         initializeStorage();
