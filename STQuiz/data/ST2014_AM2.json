@@ -7,7 +7,7 @@
     {
       "id": "ST-2014-AM2-Q1",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問1",
-      "modified": true,
+      "modified": false,
       "no": 1,
       "category": "エンタープライズアーキテクチャ",
       "keywords": [
@@ -41,7 +41,7 @@
     {
       "id": "ST-2014-AM2-Q2",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問2",
-      "modified": true,
+      "modified": false,
       "no": 2,
       "category": "プロセス改善",
       "keywords": [
@@ -57,7 +57,7 @@
         "プロセス改善"
       ],
       "question": "IDEAL によるプロセス改善の取組みにおいて,図のbに当てはまる説明はどれか。",
-      "image": "",
+      "image": "images/ST2014_AM2/Q02.png",
       "choices": {
         "ア": "解決策を作り,その先行評価·試行·展開を行う。",
         "イ": "改善活動の優先順位を設定し,具体的な改善計画を作成する。",
@@ -77,7 +77,7 @@
     {
       "id": "ST-2014-AM2-Q03",
       "source": "平成26年度 秋期 ITストラテジスト試験 問3",
-      "modified": true,
+      "modified": false,
       "no": 3,
       "category": "経営情報システム・BI",
       "keywords": [
@@ -113,7 +113,7 @@
     {
       "id": "ST-2014-AM2-Q4",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問4",
-      "modified": true,
+      "modified": false,
       "no": 4,
       "category": "経営戦略",
       "keywords": [
@@ -147,7 +147,7 @@
     {
       "id": "ST-2014-AM2-Q05",
       "source": "平成26年度 秋期 ITストラテジスト試験 午前Ⅱ 問5",
-      "modified": true,
+      "modified": false,
       "no": 5,
       "category": "調達管理・調達文書",
       "keywords": [
@@ -184,7 +184,7 @@
     {
       "id": "ST-2014-AM2-Q6",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問6",
-      "modified": true,
+      "modified": false,
       "no": 6,
       "category": "経営戦略",
       "keywords": [
@@ -218,7 +218,7 @@
     {
       "id": "ST-2014-AM2-Q7",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問7",
-      "modified": true,
+      "modified": false,
       "no": 7,
       "category": "経営戦略",
       "keywords": [
@@ -252,7 +252,7 @@
     {
       "id": "ST-2014-AM2-Q8",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問8",
-      "modified": true,
+      "modified": false,
       "no": 8,
       "category": "経営戦略",
       "keywords": [
@@ -286,7 +286,7 @@
     {
       "id": "ST-2014-AM2-Q09",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問9",
-      "modified": true,
+      "modified": false,
       "no": 9,
       "category": "経営戦略",
       "keywords": [
@@ -320,7 +320,7 @@
     {
       "id": "ST-2014-AM2-Q10",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問10",
-      "modified": true,
+      "modified": false,
       "no": 10,
       "category": "経営戦略",
       "keywords": [
@@ -354,7 +354,7 @@
     {
       "id": "ST-2014-AM2-Q11",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問11",
-      "modified": true,
+      "modified": false,
       "no": 11,
       "category": "経営戦略",
       "keywords": [
@@ -388,7 +388,7 @@
     {
       "id": "ST-2014-AM2-Q12",
       "source": "平成26年度 秋期 ITストラテジスト試験 午前Ⅱ 問12",
-      "modified": true,
+      "modified": false,
       "no": 12,
       "category": "経営戦略マネジメント・マーケティング・LTV",
       "keywords": [
@@ -402,8 +402,8 @@
         "Ⅰ-2-2 マーケティング",
         "Ⅲ-6-1 経営戦略管理"
       ],
-      "question": "顧客の収益が表のように見込まれるとき，3 年間の顧客生涯価値（LTV）は何百万円か。ここで，割引率は 10 % とし，計算は百万円未満を切り捨てるものとする。\n【年間収益の単位：百万円】\n1年目: 50 / 2年目: 10 / 3年目: 10",
-      "image": "",
+      "question": "顧客の収益が表のように見込まれるとき，3 年間の顧客生涯価値（LTV）は何百万円か。ここで，割引率は 10 % とし，計算は百万円未満を切り捨てるものとする。",
+      "image": "images/ST2014_AM2/Q12.png",
       "choices": {
         "ア": "65",
         "イ": "67",
@@ -423,7 +423,7 @@
     {
       "id": "ST-2014-AM2-Q13",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問13",
-      "modified": true,
+      "modified": false,
       "no": 13,
       "category": "経営戦略",
       "keywords": [
@@ -457,7 +457,7 @@
     {
       "id": "ST-2014-AM2-Q14",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問14",
-      "modified": true,
+      "modified": false,
       "no": 14,
       "category": "経営戦略",
       "keywords": [
@@ -473,25 +473,26 @@
       "question": "経営戦略に用いるCSF分析で明らかになるものはどれか。",
       "image": "",
       "choices": {
-        "ア": "業界内の競争に影響する要因と,自社の強み",
-        "イ": "成功するための重要な機能や特性",
-        "ウ": "競争環境の脅威と機会,企業の強み·弱み",
+        "ア": "業界内の競争に影響する要因と、自社の強み",
+        "イ": "競争環境の脅威と機会、企業の強み・弱み",
+        "ウ": "成功するための重要な機能や特性",
         "エ": "保有する事業の成長性と収益性"
       },
-      "answer": "イ",
+      "answer": "ウ",
       "answerText": "成功するための重要な機能や特性",
-      "explanation": "CSF(Critical Success Factors:主要成功要因)分析は,経営戦略や目標を達成するために不可欠となる重要な機能や特性,活動要素を明確にするための分析手法である。",
+      "explanation": "CSF（Critical Success Factors：主要成功要因）分析は、経営戦略や目標を達成するために不可欠となる重要な機能や特性、活動要素を明確にするための分析手法である。",
       "wrongChoices": {
-        "ア": "これはファイブフォース分析やSWOT分析の強み分析の説明に近いため不適切。",
-        "ウ": "これはSWOT分析の説明であるため不適切。",
-        "エ": "これはPPM分析の説明であるため不適切。"
+        "ア": "これはファイブフォース分析や競争要因分析に関連する内容であり、CSF分析の説明ではないため不適切。",
+        "イ": "これはSWOT分析の説明であるため不適切。",
+        "エ": "これはPPM（プロダクトポートフォリオマネジメント）分析の説明であるため不適切。"
       },
-      "memorize": "CSF分析は事業や戦略の目標達成に不可欠な主要成功要因を明らかにする。"
-    },
+      "memorize": "CSF分析は事業や戦略の目標達成に不可欠な主要成功要因（成功するための重要な機能や特性）を明らかにする。"
+    }
+,
     {
       "id": "ST-2014-AM2-Q15",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問15",
-      "modified": true,
+      "modified": false,
       "no": 15,
       "category": "経営戦略",
       "keywords": [
@@ -525,7 +526,7 @@
     {
       "id": "ST-2014-AM2-Q16",
       "source": "平成26年度 秋期 ITストラテジスト試験 午前Ⅱ 問16",
-      "modified": true,
+      "modified": false,
       "no": 16,
       "category": "技術戦略マネジメント・技術開発戦略の立案と計画・プロダクトライン開発",
       "keywords": [
@@ -560,7 +561,7 @@
     {
       "id": "ST-2014-AM2-Q17",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問17",
-      "modified": true,
+      "modified": false,
       "no": 17,
       "category": "経営戦略",
       "keywords": [
@@ -594,7 +595,7 @@
     {
       "id": "ST-2014-AM2-Q18",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問18",
-      "modified": true,
+      "modified": false,
       "no": 18,
       "category": "ビジネスインダストリ",
       "keywords": [
@@ -608,7 +609,7 @@
         "ビジネスインダストリ"
       ],
       "question": "ある会社の生産計画部では,毎月25日に次の手続で翌月分の計画生産量を決定している。8月分の計画生産量を求める式はどれか。",
-      "image": "images/ST2014_AM2/Q18",
+      "image": "images/ST2014_AM2/Q18.png",
       "choices": {
         "ア": "I6+P7-S7+S8",
         "イ": "S8+S9+S10+S11-I7",
@@ -628,7 +629,7 @@
     {
       "id": "ST-2014-AM2-Q19",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問19",
-      "modified": true,
+      "modified": false,
       "no": 19,
       "category": "ビジネスインダストリ",
       "keywords": [
@@ -662,7 +663,7 @@
     {
       "id": "ST-2014-AM2-Q20",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問20",
-      "modified": true,
+      "modified": false,
       "no": 20,
       "category": "人事・組織",
       "keywords": [
@@ -696,7 +697,7 @@
     {
       "id": "ST-2014-AM2-Q21",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問21",
-      "modified": true,
+      "modified": false,
       "no": 21,
       "category": "経営戦略",
       "keywords": [
@@ -732,7 +733,7 @@
     {
       "id": "ST-2014-AM2-Q22",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問22",
-      "modified": true,
+      "modified": false,
       "no": 22,
       "category": "財務・ファイナンス",
       "keywords": [
@@ -766,7 +767,7 @@
     {
       "id": "ST-2014-AM2-Q23",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問23",
-      "modified": true,
+      "modified": false,
       "no": 23,
       "category": "財務・ファイナンス",
       "keywords": [
@@ -800,7 +801,7 @@
     {
       "id": "ST-2014-AM2-Q24",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問24",
-      "modified": true,
+      "modified": false,
       "no": 24,
       "category": "法務",
       "keywords": [
@@ -834,7 +835,7 @@
     {
       "id": "ST-2014-AM2-Q25",
       "source": "2014年度 ITストラテジスト試験 午前Ⅱ 問25",
-      "modified": true,
+      "modified": false,
       "no": 25,
       "category": "セキュリティ",
       "keywords": [
