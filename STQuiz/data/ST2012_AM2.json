@@ -211,7 +211,7 @@
     {
       "id": "ST-2012-AM2-Q07",
       "source": "2012年度 ITストラテジスト試験 午前Ⅱ 問7",
-      "modified": true,
+      "modified": false,
       "no": 7,
       "category": "企業買収",
       "keywords": [
@@ -245,7 +245,7 @@
     {
       "id": "ST-2012-AM2-Q8",
       "source": "2012年度 ITストラテジスト試験 午前Ⅱ 問8",
-      "modified": true,
+      "modified": false,
       "no": 8,
       "category": "プロダクトポートフォリオマネジメント",
       "keywords": [
@@ -279,7 +279,7 @@
     {
       "id": "ST-2012-AM2-Q9",
       "source": "2012年度 ITストラテジスト試験 午前Ⅱ 問9",
-      "modified": true,
+      "modified": false,
       "no": 9,
       "category": "経営戦略",
       "keywords": [
@@ -313,7 +313,7 @@
     {
       "id": "ST-2012-AM2-Q10",
       "source": "2012年度 ITストラテジスト試験 午前Ⅱ 問10",
-      "modified": true,
+      "modified": false,
       "no": 10,
       "category": "事業戦略",
       "keywords": [
@@ -347,7 +347,7 @@
     {
       "id": "ST-2012-AM2-Q11",
       "source": "2012年度 ITストラテジスト試験 午前Ⅱ 問11",
-      "modified": true,
+      "modified": false,
       "no": 11,
       "category": "マーケティング",
       "keywords": [
@@ -381,7 +381,7 @@
     {
       "id": "ST-2012-AM2-Q12",
       "source": "2012年度 ITストラテジスト試験 午前Ⅱ 問12",
-      "modified": true,
+      "modified": false,
       "no": 12,
       "category": "マーケティング",
       "keywords": [
@@ -415,7 +415,7 @@
     {
       "id": "ST-2012-AM2-Q13",
       "source": "2012年度 ITストラテジスト試験 午前Ⅱ 問13",
-      "modified": true,
+      "modified": false,
       "no": 13,
       "category": "技術予測",
       "keywords": [
